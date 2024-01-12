@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody2D;
+    public Rigidbody2D rb;
+    public Rigidbody2D weaponRB;
     public float speed;
+    public Weapon weapon;
+
+    Vector2 moveDir;
+    Vector2 mousePos;
+
     // Start is called before the first frame update
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -18,6 +24,26 @@ public class PlayerMovement : MonoBehaviour
         float xAxis = Input.GetAxisRaw("Horizontal");
         float yAxis = Input.GetAxisRaw("Vertical");
 
-        _rigidbody2D.velocity = new Vector2(xAxis,yAxis) * speed;
+        rb.velocity = new Vector2(xAxis,yAxis) * speed;
+        
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("FIRE IN THE HOLE");
+            weapon.Fire();
+        }
+
+        moveDir = new Vector2(xAxis, yAxis).normalized;
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(moveDir.x * speed, moveDir.y * speed);
+
+        Vector2 aimDir = mousePos - rb.position;
+        float aimAngle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg - 90f;
+
+        weaponRB.rotation = aimAngle;
     }
 }
