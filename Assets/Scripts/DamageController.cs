@@ -19,6 +19,5 @@ public class DamageController : MonoBehaviour
     {
         _healthController.PlayerHealth = _healthController.PlayerHealth - EnemyDamage; //Taking playerhealth from the HealthController script and then substracting it my damage.
         _healthController.UpdateHealth(); //Calling the upadtehealth function inside the healthcontroller script so changing the hearts visually.
-        //gameObject.SetActive(false); //this deletes the object we can change this
     }
 }
