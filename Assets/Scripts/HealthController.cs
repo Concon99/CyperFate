@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
     public int PlayerHealth;
+    public int damage;
 
     [SerializeField] private Image[] hearts; //Creating a Array for the hearts (the three hearts)
     
@@ -28,6 +30,11 @@ public class HealthController : MonoBehaviour
             {
                 hearts[i].color = Color.black; //make the heart black/white or dead (will probably change this later)
             }
+        }
+
+        if(PlayerHealth == 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
