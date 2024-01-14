@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D weaponRB;
     public float speed;
     public Weapon weapon;
+    private Animator _animator;
 
     Vector2 moveDir;
     Vector2 mousePos;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,20 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(xAxis,yAxis) * speed;
         
+        if (rb.velocity != Vector2.zero) //switching between running and idle animation
+        {
+            _animator.SetBool("run", true);
+        }
+        else
+        {
+            _animator.SetBool("run", false);
+        }
 
+
+
+
+
+        //shooting
         if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("FIRE IN THE HOLE");
