@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Rigidbody2D playerRB;
 
     public GameObject bulletPrefab;
     public Transform firePoint;
     public float fireForce = 20f;
-
-    void Update()
-    {
-        rb.position = playerRB.position;
-    }
 
     public void Fire()
     {

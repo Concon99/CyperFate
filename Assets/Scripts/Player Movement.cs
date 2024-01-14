@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     private Animator _animator;
     public Rigidbody2D rb;
-    public Rigidbody2D weaponRB;
     public float speed;
     public Weapon weapon;
 
@@ -56,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 aimDir = mousePos - rb.position;
         float aimAngle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg - 90f;
-
-        weaponRB.rotation = aimAngle;
+       
+        rb.rotation = aimAngle;
     }
 }
