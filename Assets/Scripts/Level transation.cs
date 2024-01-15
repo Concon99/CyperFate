@@ -2,23 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//IN ORDER TO ACESS SCENES GO TO BUILD SETTINGS there you can see the scene numbers so when transationing you'll know what numbers to transation through.
 
-
-public class NewBehaviourScript : MonoBehaviour
+public class Leveltransation : MonoBehaviour
 {
-    public int sceneBuildIntext; //creating the scene buidling
-    
-    private void OnTriggerEnter2D(Collider2D other) 
+    public int sceneBuildIntext; // Creating the scene building
+    public Animator transation;
+    public float transationTime = 1f;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        print("Trigger entered");
-
-
-        if(other.tag == "Player") //Checking if other from the triggerentertd is player
+        if (other.tag == "Player")
         {
-            print("Switching scene to " + sceneBuildIntext); //printing what scene were loading too
-            SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single); //single so it loads one scene. Loading the scene
+            print("Trigger entered");
+            transation.SetTrigger("Fadein"); // Causing the fade-in transition
+            StartCoroutine(TransitionToScene(other));
         }
     }
 
+    IEnumerator TransitionToScene(Collider2D other)
+    {
+        
+        print("Switching scene to " + sceneBuildIntext); // Printing what scene we're loading to
+        yield return new WaitForSeconds(transationTime);
+        SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single); // Single so it loads one scene. Loading the scen
+    }
 }
