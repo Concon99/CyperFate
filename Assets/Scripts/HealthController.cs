@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
-    public int PlayerHealth = 5;
+    public int PlayerHealth;
     public int damage;
 
     [SerializeField] private Image[] hearts; //Creating a Array for the hearts (the three hearts)

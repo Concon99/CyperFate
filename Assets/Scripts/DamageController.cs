@@ -9,7 +9,7 @@ public class DamageController : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision) //if impacting something with a 2d collider
     {
-        if (collision.GetComponent<PlayerMovement>()) //Checking if what its colliding with has the tag "player"
+        if (collision.CompareTag("Player")) //Checking if what its colliding with has the tag "player"
         {
             Damage();
         }
@@ -19,6 +19,5 @@ public class DamageController : MonoBehaviour
     {
         _healthController.PlayerHealth = _healthController.PlayerHealth - EnemyDamage; //Taking playerhealth from the HealthController script and then substracting it my damage.
         _healthController.UpdateHealth(); //Calling the upadtehealth function inside the healthcontroller script so changing the hearts visually.
-        Destroy(gameObject);
     }
 }

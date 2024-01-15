@@ -8,10 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     public Weapon weapon;
-    public float fireRate;
-    public bool bulletCooldown;
-
-    public static float damage = 2f;
 
     Vector2 moveDir;
     Vector2 mousePos;
@@ -43,12 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
 
 //bullet stuff
-        if(Input.GetMouseButtonDown(0) && bulletCooldown == false)
+        if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("FIRE IN THE HOLE");
             weapon.Fire();
-            bulletCooldown = true;
-            StartCoroutine(BulletCooldown());
         }
 
         moveDir = new Vector2(xAxis, yAxis).normalized;
@@ -63,11 +57,5 @@ public class PlayerMovement : MonoBehaviour
         float aimAngle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg - 90f;
        
         rb.rotation = aimAngle;
-    }
-
-    IEnumerator BulletCooldown()
-    {
-        yield return new WaitForSeconds(fireRate);
-        bulletCooldown = false;
     }
 }
