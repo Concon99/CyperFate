@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 1277208406}
   - component: {fileID: 1277208405}
   m_Layer: 0
-  m_Name: peanut
+  m_Name: standinpeanut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1558,21 +1558,52 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: Player
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: YOOOO WHATS GOODO
-    - character:
         name: peanut
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
-      line: fuck you
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: " Hiya! I\u2019m Peanut the Squirrel! Think of me as a sort of guide
+        to the factory!"
     - character:
         name: player
         icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
-      line: kill yourself
+      line: who are you
     - character:
         name: peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: :(
+      line: I just said my name bud-
+    - character:
+        name: Player
+        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+      line: WHAT are you
+    - character:
+        name: peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: "I\u2019m a hologram designed to help people leave this place!"
+    - character:
+        name: player
+        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+      line: what do you mean? where are we?
+    - character:
+        name: peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: "We\u2019re kinda beneath a big facility, but the people here aren\u2019t
+        evil!"
+    - character:
+        name: peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: We work in cybernetics! And with this technology we can help you be ready
+        for the outside world again!
+    - character:
+        name: player
+        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+      line: what do you mean?
+    - character:
+        name: peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: dumbass
+    - character:
+        name: peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: just follow me
 --- !u!1 &1339319261
 GameObject:
   m_ObjectHideFlags: 0
