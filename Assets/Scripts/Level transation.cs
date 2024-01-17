@@ -8,11 +8,11 @@ public class Leveltransation : MonoBehaviour
     public int sceneBuildIntext; // Creating the scene building
     public Animator transation;
     public float transationTime = 1f;
-    [SerializeField] private DialogueTrigger _DialogueTrigger;
+    [SerializeField] private DialogueManager _DialogueManager;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!_DialogueTrigger.Hastriggered && other.tag == "Player" )
+        if (!_DialogueManager.isDialogueActive && other.tag == "Player" )
         {
             print("Trigger entered");
             transation.SetTrigger("Fadein"); // Causing the fade-in transition
