@@ -27,17 +27,25 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public bool Hastriggered = false;
 
-    public void TriggerDialogue() 
+
+
+
+public void TriggerDialogue()
     {
-        DialogueManager.Instance.StartDialogue(dialogue); 
+        if (!Hastriggered) // Check if the dialogue has not been triggered yet
+        {
+            DialogueManager.Instance.StartDialogue(dialogue);
+            Hastriggered = true; 
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) 
         {
-            TriggerDialogue(); 
+            TriggerDialogue();
         }
     }
 }
