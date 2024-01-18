@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 75944710}
   - component: {fileID: 75944709}
   m_Layer: 0
-  m_Name: Square
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
