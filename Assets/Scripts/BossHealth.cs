@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossHealth : MonoBehaviour
 {
     [SerializeField] private int PlayerDamage;
-    private int bHealth = 100;
+    [SerializeField] private int bHealth = 100;
 
     public int BHealth // Property to access bHealth
     {
