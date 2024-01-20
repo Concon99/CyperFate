@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
     public float typingSpeed = 0.2f;
     public Animator animator;
+    public bool RoboticEyes = false;
 
     private void Start()
     {
@@ -76,5 +77,12 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = false;
         animator.Play("hide");
 
+    }
+
+    public void Reject()
+    {
+     isDialogueActive = false;
+     animator.Play("hide");
+     RoboticEyes = true;
     }
 }
