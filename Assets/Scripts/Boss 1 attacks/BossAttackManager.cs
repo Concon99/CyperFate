@@ -10,6 +10,7 @@ public class BossAttackManager : MonoBehaviour
     [SerializeField] private B1Attack3 _B1Attack3; // Assuming B1Attack3 is the class with the Attack3 method
     [SerializeField] private BossHealth _BossHealth;
     public float WaitTime = 5f;
+    public float TimeBeforeAttacks;
     public int sceneBuildIntext;
 
     private void Start()
@@ -20,10 +21,10 @@ public class BossAttackManager : MonoBehaviour
 private IEnumerator ContinuousAttacks()
 {
     print("ContinuousAttacks started");
-    
+    yield return new WaitForSeconds(TimeBeforeAttacks);
+
     while (_BossHealth.BHealth > 0f)
     {
-        yield return new WaitForSeconds(WaitTime);
         print("New attack");
         int randomAttack = Random.Range(1, 4);
         print(randomAttack);
@@ -43,6 +44,8 @@ private IEnumerator ContinuousAttacks()
             print("Performing Attack 3");
             _B1Attack3.Attack3();
         }
+
+        yield return new WaitForSeconds(WaitTime);
     }
 
     SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single);
