@@ -83,6 +83,13 @@ public class DialogueManager : MonoBehaviour
     {
      isDialogueActive = false;
      animator.Play("hide");
+     RoboticEyes = false;
+    }
+    
+    public void Accept()
+    {
+     isDialogueActive = false;
+     animator.Play("hide");
      RoboticEyes = true;
     }
 }
