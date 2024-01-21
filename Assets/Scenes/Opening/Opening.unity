@@ -981,8 +981,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -484.91, y: 256}
-  m_SizeDelta: {x: 187.5536, y: 325.9205}
+  m_AnchoredPosition: {x: -478, y: 256}
+  m_SizeDelta: {x: 215, y: 325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481311596
 MonoBehaviour:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1365,7 +1365,7 @@ MonoBehaviour:
         to the factory!"
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: who are you
     - character:
         name: peanut
@@ -1373,7 +1373,7 @@ MonoBehaviour:
       line: I just said my name bud-
     - character:
         name: Player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: WHAT are you
     - character:
         name: peanut
@@ -1381,7 +1381,7 @@ MonoBehaviour:
       line: "I\u2019m a hologram designed to help people leave this place!"
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: what do you mean? where are we?
     - character:
         name: peanut
@@ -1395,7 +1395,7 @@ MonoBehaviour:
         for the outside world again!
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: what do you mean?
     - character:
         name: peanut

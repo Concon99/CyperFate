@@ -577,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -484.91, y: 256}
-  m_SizeDelta: {x: 187.5536, y: 325.9205}
+  m_AnchoredPosition: {x: -478, y: 256}
+  m_SizeDelta: {x: 215, y: 325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481311596
 MonoBehaviour:
@@ -1328,7 +1328,7 @@ MonoBehaviour:
       line: you rejected the legs too?
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: yeah
     - character:
         name: peanut
@@ -1342,7 +1342,7 @@ MonoBehaviour:
         you collect a part the rest you left before will attach to you!
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: how?
     - character:
         name: peanut

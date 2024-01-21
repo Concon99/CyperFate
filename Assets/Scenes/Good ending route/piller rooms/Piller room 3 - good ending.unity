@@ -709,8 +709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -484.91, y: 256}
-  m_SizeDelta: {x: 187.5536, y: 325.9205}
+  m_AnchoredPosition: {x: -478, y: 256}
+  m_SizeDelta: {x: 215, y: 325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481311596
 MonoBehaviour:
@@ -1472,7 +1472,7 @@ MonoBehaviour:
       line: You've come far and we've had problems but it's almost over!
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: finally geez
   Hastriggered: 0
 --- !u!1 &977792670
@@ -3491,7 +3491,6 @@ GameObject:
   - component: {fileID: 2004565417}
   - component: {fileID: 2004565416}
   - component: {fileID: 2004565415}
-  - component: {fileID: 2004565414}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3499,26 +3498,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2004565414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004565413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2969e6d47e92d5e46b550f6d219b09ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerHealth: 5
-  damage: 0
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &2004565415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,7 +3690,7 @@ MonoBehaviour:
       line: three times this time! Now you can truly take on everything!
     - character:
         name: player
-        icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
+        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: thanks.
     - character:
         name: peanut

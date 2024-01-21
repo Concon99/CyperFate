@@ -24,11 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/level 1 boss death.unity
     guid: c732030dc97b1f64f8004e74bb5cde7f
   - enabled: 1
-    path: Assets/Scenes/Bad ending route/Piller room 1 - bad ending 1.unity
-    guid: 33ecd484598e09449907e127eed750a3
+    path: Assets/Scenes/Bad ending route/Piller rooms/Piller room 1 - bad ending
+      2.unity
+    guid: 9ea3d065812b0594f80de383e904d30e
   - enabled: 1
-    path: Assets/Scenes/Good ending route/Piller room 1 - good ending.unity
-    guid: 5cd6bd19e076e77428013cfe657684ae
+    path: Assets/Scenes/Good ending route/piller rooms/Piller room 2 - good ending.unity
+    guid: 448372ea691f80347a582b9f0b0b63ec
   - enabled: 1
     path: Assets/Scenes/Bad ending route/Level 2 - bad ending.unity
     guid: 12507262cbfa87941a7ef8f86bf12ea8
@@ -42,11 +43,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Good ending route/level 2 boss dead good ending.unity
     guid: 1e4a1a3169c49854b98747414a5f9e80
   - enabled: 1
-    path: Assets/Scenes/Bad ending route/Piller room 2 - bad ending 2.unity
-    guid: 9ea3d065812b0594f80de383e904d30e
+    path: Assets/Scenes/Bad ending route/Piller rooms/Piller room 2 - bad ending
+      1.unity
+    guid: 33ecd484598e09449907e127eed750a3
   - enabled: 1
-    path: Assets/Scenes/Good ending route/Piller room 2 - good ending.unity
-    guid: 448372ea691f80347a582b9f0b0b63ec
+    path: Assets/Scenes/Good ending route/piller rooms/Piller room 1 - good ending.unity
+    guid: 5cd6bd19e076e77428013cfe657684ae
   - enabled: 1
     path: Assets/Scenes/Bad ending route/Level 3 - bad ending 1.unity
     guid: 803bf2bebace52241871cd843c17ca50
@@ -60,9 +62,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Good ending route/level 3 boss dead good ending.unity
     guid: 7c65b2b8697464c49a06a168fa882b6f
   - enabled: 1
-    path: Assets/Scenes/Bad ending route/Piller room 3 - good ending 3.unity
+    path: Assets/Scenes/Bad ending route/Piller rooms/Piller room 3 - good ending
+      3.unity
     guid: 7fe57a55ef794ed439737495c289795a
   - enabled: 1
-    path: Assets/Scenes/Good ending route/Piller room 3 - good ending.unity
+    path: Assets/Scenes/Good ending route/piller rooms/Piller room 3 - good ending.unity
     guid: c34ee3a82fc35b84b8e7145c51c7728d
   m_configObjects: {}
