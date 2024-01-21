@@ -13,7 +13,7 @@ public class itemdisappears : MonoBehaviour
     
     void Update()
     {
-        if (_DialogueManager.RoboticEyes)
+        if (_DialogueManager.Robotic_item)
         {
             Destroy(gameObject);
         }
