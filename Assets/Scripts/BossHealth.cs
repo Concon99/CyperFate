@@ -1,9 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
     [SerializeField] private int PlayerDamage;
     [SerializeField] private int bHealth = 100;
+    [SerializeField] private int bHealthMax = 100;
+    [SerializeField] private BossHealthVisual healthbar; // Corrected variable name
+
+    private void Awake() // Corrected method name
+    {
+        // Assuming you have a Rigidbody2D component on the same GameObject
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        // Assuming BossHealthVisual is a component in the children of this GameObject
+        healthbar = GetComponentInChildren<BossHealthVisual>();
+    }
 
     public int BHealth // Property to access bHealth
     {
@@ -24,7 +36,10 @@ public class BossHealth : MonoBehaviour
         print("boss hit~!");
         bHealth = bHealth - PlayerDamage;
 
-        if (bHealth < 0)
+        // Assuming healthbar has a method like UpdateHealthBar that takes parameters
+        healthbar.UpdateHealthBar(bHealth, bHealthMax);
+
+        if (bHealth <= 0)
         {
             Destroy(gameObject);
         }
