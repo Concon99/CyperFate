@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c60703f2a48078c449cb151e215afdf9
+guid: 6495a5cd8d6867c4684cf0a139227ebb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shooting sprite_0
+      name: shooting running_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 96
-        width: 112
-        height: 128
+        x: 45
+        y: 220
+        width: 70
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4741b5a4e8b762b4da4e3ebac22f1805
-      internalID: -142530769
+      spriteID: 38770d75377b92840b8bb89aff17a94b
+      internalID: -1877568357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting sprite_1
+      name: shooting running_1
       rect:
         serializedVersion: 2
-        x: 328
-        y: 80
-        width: 112
-        height: 112
+        x: 205
+        y: 210
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ef4fde320dc1441b72b245e2dd7dc2
-      internalID: 595037006
+      spriteID: 8fb5e52258cd3644dad938d9a2abdacf
+      internalID: 400622190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting sprite_2
+      name: shooting running_2
       rect:
         serializedVersion: 2
-        x: 584
-        y: 72
-        width: 112
-        height: 120
+        x: 365
+        y: 205
+        width: 70
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18a9f91f8b89ddf43bf1c63e456528d4
-      internalID: 356948558
+      spriteID: 28e9e6b98f6882b4ea836efbf937d15c
+      internalID: 266180059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting sprite_3
+      name: shooting running_3
       rect:
         serializedVersion: 2
-        x: 840
-        y: 96
-        width: 112
-        height: 96
+        x: 525
+        y: 220
+        width: 70
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e616db33bddedfb489e883d92bb43c45
-      internalID: 93731599
+      spriteID: 9aa67e7b1cbea4447b38f8c8014ded93
+      internalID: 1988459079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting sprite_4
+      name: shooting running_4
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 80
-        width: 112
-        height: 112
+        x: 685
+        y: 210
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd611e57a0d63854fad2a34fdf4ef454
-      internalID: -943298469
+      spriteID: 7a5d82e4cf0651b4ab85b7303dbcf646
+      internalID: 2068181182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shooting sprite_5
+      name: shooting running_5
       rect:
         serializedVersion: 2
-        x: 1352
-        y: 72
-        width: 112
-        height: 120
+        x: 45
+        y: 45
+        width: 70
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72a4a6df1867cad449969dcc16f137f6
-      internalID: -280540273
+      spriteID: 010b1db4bda898f439b5767b88fde222
+      internalID: -1391264156
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shooting sprite_0: -142530769
-      shooting sprite_1: 595037006
-      shooting sprite_2: 356948558
-      shooting sprite_3: 93731599
-      shooting sprite_4: -943298469
-      shooting sprite_5: -280540273
+      shooting running_0: -1877568357
+      shooting running_1: 400622190
+      shooting running_2: 266180059
+      shooting running_3: 1988459079
+      shooting running_4: 2068181182
+      shooting running_5: -1391264156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

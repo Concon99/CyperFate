@@ -2858,6 +2858,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6706491521359076986, guid: e8405aed6adb44a41bed2000d83fa99a, type: 3}
   firePoint: {fileID: 2055171259}
   fireForce: 20
+  _animator: {fileID: 1266625269}
 --- !u!212 &1713529393
 SpriteRenderer:
   m_ObjectHideFlags: 0
