@@ -1486,27 +1486,27 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: Congratulations on defeating your second boss!
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: This ability is called the dash. You can become invincible less than
-        a second when dashing which can be very helpful!
+      line: This ability is called the dash. You become invincible for less than
+        a second when dashing, which can be very helpful!
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: it can also be used to gain ground quick to avoid attacks!
+      line: It can also be used to gain ground quickly and avoid attacks!
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: my eyes still hurt
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: just a wait a little longer and the stinging will end! Your halfway to
-        the end!
+      line: Just wait a little longer, and the stinging will end! You're halfway
+        to the end!
   Hastriggered: 0
 --- !u!1 &895450920
 GameObject:
@@ -4203,9 +4203,9 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: you can take two of these items now!
+      line: You can take two of these items now!
   Hastriggered: 0
 --- !u!61 &2119560708
 BoxCollider2D:

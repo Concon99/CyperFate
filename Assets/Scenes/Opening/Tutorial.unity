@@ -1455,50 +1455,50 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
-      line: So what's going on exactly?
+      line: So, what's going on exactly?
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: We're basically a facility that trains you people into preparing for
-        the new world. You're one of our first testers!
+      line: We're basically a facility that trains people to prepare for the new
+        world. You're one of our first testers!
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: Ok
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: During your training you will have to fight several bosses we've designed.
         I am programmed to help you learn what to do.
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: If you've noticed your equipped with a gun. Use it too shoot the enemies.
-        If you want you can use that target as practice!
+      line: If you've noticed, you're equipped with a gun. Use it to shoot the enemies.
+        If you want, you can use that target as practice!
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: Anyways, if you defeat the bosses they will drop items that can enhance
+      line: Anyways, if you defeat the bosses, they will drop items that can enhance
         your abilities.
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: like what?
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: You'll see!
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: alright is that all
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: yeah pretty much! take as much time as you need here to practice on the
-        target!
+      line: Yeah, pretty much! Take as much time as you need here to practice on
+        the target!
   Hastriggered: 0
 --- !u!1 &977792670
 GameObject:
@@ -1599,6 +1599,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6706491521359076986, guid: e8405aed6adb44a41bed2000d83fa99a, type: 3}
   firePoint: {fileID: 977792671}
   fireForce: 20
+  _animator: {fileID: 0}
 --- !u!4 &1044262207
 Transform:
   m_ObjectHideFlags: 0
@@ -1701,6 +1702,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerDamage: 1
   bHealth: 10
+  bHealthMax: 100
+  healthbar: {fileID: 0}
 --- !u!50 &1047909590
 Rigidbody2D:
   serializedVersion: 4

@@ -1495,22 +1495,22 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: Congratulations on defeating your first boss!
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: With this new ability to can shoot a powerful laser attack! This will
+      line: With this new ability, you can shoot a powerful laser attack! This will
         be helpful later on.
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: my eyes hurt
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: that's part of the process! Practice on the target if you need to.
+      line: That's part of the process! Practice on the target if you need to.
   Hastriggered: 0
 --- !u!1 &782196929
 GameObject:
@@ -4127,12 +4127,12 @@ MonoBehaviour:
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: what are these pillars for
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: This is additional help from are corporation! We'll offer you more boosts
-        so that you can prepare for the real world!
+      line: This is additional help from our corporation! We'll offer you more boosts
+        so that you can prepare for the real world.
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: just pick one!
   Hastriggered: 0

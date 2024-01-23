@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: accept
+  m_text: take
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1431,10 +1431,10 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: player
+        name: 
         icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
       line: Robotic eyes - Gives the ability to shoot a charged attack with space
-        or z. In exchange you will lose humanity. Accept?
+        or z.
   Hastriggered: 0
 --- !u!1 &762526831
 GameObject:
@@ -3610,7 +3610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: reject
+  m_text: leave
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

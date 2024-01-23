@@ -1578,31 +1578,31 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: Congratulations on defeating your first-
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: ...
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: um where are the eyes?
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: I didn't take them
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: oh ummm
+      line: Oh ummm
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: that's fine! Just know that without the cybernetic features the bosses
-        will be much harder. So next time please take them! You're here to prepare
-        for the outside world!
+      line: That's fine! Just know that without the cybernetic features, the bosses
+        will be much harder. So next time, please take them! You're here to prepare
+        for the outside world
   Hastriggered: 0
 --- !u!1 &815126956
 GameObject:
@@ -4207,17 +4207,17 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
-      line: what are these pillars for
+      line: What are these pillars for in the game?
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: ...
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: This is additional help from are corporation! We'll offer you more boosts
+      line: This is additional help from our corporation! We'll offer you more boosts
         so that you can prepare for the real world!
     - character:
         name: peanut

@@ -1311,17 +1311,17 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: After this hallway is the first boss! Good luck!
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: thanks?
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: remember what you've learned!
+      line: Remember what you've learned!
   Hastriggered: 0
 --- !u!1 &785578683
 GameObject:
@@ -1562,6 +1562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerDamage: 1
   bHealth: 5
+  bHealthMax: 100
+  healthbar: {fileID: 0}
 --- !u!50 &1302305206
 Rigidbody2D:
   serializedVersion: 4
@@ -2315,6 +2317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerDamage: 1
   bHealth: 5
+  bHealthMax: 100
+  healthbar: {fileID: 0}
 --- !u!1 &1575220406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2716,6 +2720,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6706491521359076986, guid: e8405aed6adb44a41bed2000d83fa99a, type: 3}
   firePoint: {fileID: 378590761}
   fireForce: 20
+  _animator: {fileID: 0}
 --- !u!4 &1674332177
 Transform:
   m_ObjectHideFlags: 0
@@ -3893,6 +3898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerDamage: 1
   bHealth: 5
+  bHealthMax: 100
+  healthbar: {fileID: 0}
 --- !u!50 &2105260681
 Rigidbody2D:
   serializedVersion: 4

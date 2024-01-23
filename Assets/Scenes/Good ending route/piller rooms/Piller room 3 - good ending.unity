@@ -1213,23 +1213,23 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: Congratulations you only have one boss left to fight!
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: To motivate you I've brought you your final item a new brain!
+      line: 'To motivate you, I''ve brought you your final item: a new brain!'
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: with it you'll finally be able to become your most powerful!
+      line: With it you'll finally be able to become your most powerful!
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
       line: You've come far and we've had problems but it's almost over!
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: finally geez
   Hastriggered: 0
@@ -3942,17 +3942,17 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: three times this time! Now you can truly take on everything!
+      line: Three times this time! Now you can truly take on everything!
     - character:
-        name: player
+        name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: thanks.
     - character:
-        name: peanut
+        name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: make sure to take the brain! its important
+      line: Make sure to take the brain! Its important!
   Hastriggered: 1
 --- !u!61 &2119560708
 BoxCollider2D:
