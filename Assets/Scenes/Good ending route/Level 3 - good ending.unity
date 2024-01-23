@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 831951787}
-  speed: 10
+  speed: 15
   weapon: {fileID: 1439523888}
 --- !u!50 &831951787
 Rigidbody2D:

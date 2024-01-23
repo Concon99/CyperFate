@@ -457,8 +457,8 @@ Transform:
   m_GameObject: {fileID: 324174872}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.4314, y: 23.0221, z: 0.044200577}
-  m_LocalScale: {x: 7.7765255, y: 73.29519, z: 1}
+  m_LocalPosition: {x: -105.4068, y: 23.0221, z: 0.044200577}
+  m_LocalScale: {x: 105.43705, y: 73.29519, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835678168}
@@ -615,8 +615,8 @@ Transform:
   m_GameObject: {fileID: 330838217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.6025, y: 62.7445, z: 0.044200577}
-  m_LocalScale: {x: 88.7113, y: 7.4880905, z: 1}
+  m_LocalPosition: {x: -10.2548, y: 75.6818, z: 0.044200577}
+  m_LocalScale: {x: 159.92961, y: 33.36244, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835678168}
@@ -1359,8 +1359,8 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: " Hiya! I\u2019m Peanut the Squirrel! Think of me as a sort of guide
         to the factory!"
     - character:
@@ -1368,29 +1368,29 @@ MonoBehaviour:
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: who are you
     - character:
-        name: peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        name: Peanut
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: I just said my name bud-
     - character:
         name: Player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: WHAT are you
     - character:
-        name: peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: "I\u2019m a hologram designed to help people leave this place!"
     - character:
         name: player
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: what do you mean? where are we?
     - character:
-        name: peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: "We\u2019re kinda beneath a big facility, but the people here aren\u2019t
         evil!"
     - character:
-        name: peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: We work in cybernetics! And with this technology we can help you be ready
         for the outside world again!
     - character:
@@ -1398,8 +1398,8 @@ MonoBehaviour:
         icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
       line: what do you mean?
     - character:
-        name: peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: just go into the next room I'll follow you
   Hastriggered: 0
 --- !u!1 &801809591
@@ -1430,8 +1430,8 @@ Transform:
   m_GameObject: {fileID: 801809591}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.7686, y: 26.234, z: 0.044200577}
-  m_LocalScale: {x: 8.981406, y: 66.97617, z: 1}
+  m_LocalPosition: {x: 90.462, y: 26.234, z: 0.044200577}
+  m_LocalScale: {x: 143.82877, y: 66.97617, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835678168}
@@ -1588,8 +1588,8 @@ Transform:
   m_GameObject: {fileID: 825553403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.1, y: -10.9, z: 0.044200577}
-  m_LocalScale: {x: 81.41617, y: 7.2013106, z: 1}
+  m_LocalPosition: {x: -7.0231, y: -38.619, z: 0.044200577}
+  m_LocalScale: {x: 211.6965, y: 62.639164, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835678168}
@@ -1826,6 +1826,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6706491521359076986, guid: e8405aed6adb44a41bed2000d83fa99a, type: 3}
   firePoint: {fileID: 10231867}
   fireForce: 20
+  _animator: {fileID: 0}
 --- !u!4 &1005921465
 Transform:
   m_ObjectHideFlags: 0

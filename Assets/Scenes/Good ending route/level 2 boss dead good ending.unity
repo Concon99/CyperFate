@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1109080038}
-  speed: 10
+  speed: 15
   weapon: {fileID: 1725765152}
 --- !u!212 &1109080040
 SpriteRenderer:
