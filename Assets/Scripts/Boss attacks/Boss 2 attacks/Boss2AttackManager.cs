@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class Boss2AttackManager : MonoBehaviour
 {
     [SerializeField] private BossHealth _BossHealth;
-    [SerializeField] private B2Attack1 _B2Attack1;
+    [SerializeField] private EnemyBulletSpawner _EnemyBulletSpawner;
     public float WaitTime = 5f;
     public float TimeBeforeAttacks;
-    public int sceneBuildIntext;
+    public int sceneBuildIndex; // Corrected variable name
 
     private void Start()
     {
@@ -30,29 +30,28 @@ public class Boss2AttackManager : MonoBehaviour
             if (randomAttack == 1)
             {
                 print("Performing Attack 1");
-                _B2Attack1.B2Attack1Function();
+                _EnemyBulletSpawner.Attack1();
             }
-            if (randomAttack == 2)
+            else if (randomAttack == 2)
             {
                 print("Performing Attack 2");
+                // Add code for Attack 2
             }
-            if (randomAttack == 3)
+            else if (randomAttack == 3)
             {
                 print("Performing Attack 3");
+                // Add code for Attack 3
             }
-            if (randomAttack == 4)
+            else if (randomAttack == 4)
             {
                 print("Performing Attack 4");
-            }
-             if (randomAttack == 5)
-            {
-                print("Performing Attack 5");
+                // Add code for Attack 4
             }
 
             yield return new WaitForSeconds(WaitTime);
         }
 
         print("ContinuousAttacks ended");
-        SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
 }

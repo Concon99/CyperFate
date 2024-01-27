@@ -416,6 +416,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &466956011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1114787679042366336, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: _healthController
+      value: 
+      objectReference: {fileID: 1209215717}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -109.355446
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.314526
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944534165221281547, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871226687996098561, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+      propertyPath: m_Name
+      value: lighting
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +880,7 @@ GameObject:
   - component: {fileID: 831951790}
   - component: {fileID: 831951793}
   - component: {fileID: 831951794}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1768,7 +1829,7 @@ GameObject:
   - component: {fileID: 1439523885}
   - component: {fileID: 1439523886}
   - component: {fileID: 1439523888}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2406,6 +2467,7 @@ GameObject:
   - component: {fileID: 1824222509}
   - component: {fileID: 1824222510}
   - component: {fileID: 1824222511}
+  - component: {fileID: 1824222512}
   m_Layer: 0
   m_Name: sBoss
   m_TagString: Bullet
@@ -2428,7 +2490,7 @@ MonoBehaviour:
   PlayerDamage: 1
   bHealth: 200
   bHealthMax: 200
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 642519740}
 --- !u!50 &1824222505
 Rigidbody2D:
   serializedVersion: 4
@@ -2521,6 +2583,7 @@ Transform:
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1881571510}
   - {fileID: 1355148694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2599,6 +2662,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyDamage: 1
   _healthController: {fileID: 1209215717}
+--- !u!114 &1824222512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824222503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766bbb8bc6255e8489b51e8069472d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7871226687996098561, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
+  totalBullets: 26
+  bulletSpeed: 0
+  bulletLife: 2
+  minSpawnInterval: 1
+  maxSpawnInterval: 2
+  randomDelay: 0
 --- !u!1 &1827565991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,6 +2911,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1881571509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881571510}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1881571510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881571509}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5065743, y: -1.1976136, z: 5.779715}
+  m_LocalScale: {x: 0.11111112, y: 0.11111112, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1824222508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895688388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,7 +3101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2015912900}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -3166,9 +3279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _BossHealth: {fileID: 1824222504}
+  _EnemyBulletSpawner: {fileID: 1824222512}
   WaitTime: 5
   TimeBeforeAttacks: 0
-  sceneBuildIntext: 10
+  sceneBuildIndex: 0
 --- !u!1 &2124863490
 GameObject:
   m_ObjectHideFlags: 3
@@ -3346,3 +3460,4 @@ SceneRoots:
   - {fileID: 3672887670942416011}
   - {fileID: 2123736619}
   - {fileID: 1334028912}
+  - {fileID: 466956011}
