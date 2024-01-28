@@ -7,9 +7,20 @@ public class Boss2movement : MonoBehaviour
     [SerializeField] private BossHealth _BossHealth;
     public float MoveDistance = 5f; // Distance to move in each direction
     public float WaitTime = 3f; // Adjusted wait time
+    public bool Stopmoving = false;
+    public GameObject bulletPrefab;
+    public int totalBullets = 15;
+    public float bulletSpeed = 5f;
+    public float bulletLife = 3f;
+    private int bulletsSpawned = 0;
+    public float randomDelay;
+    private Rigidbody2D rb;
+
+    public Vector2 TargetPosition = new Vector2(0f, 0f); // Specify the desired destination coordinates
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         StartCoroutine(MoveBossInBox());
     }
 
@@ -23,23 +34,92 @@ public class Boss2movement : MonoBehaviour
         while (_BossHealth.BHealth > 0f)
         {
             // Move right for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.right * EnemySpeed;
+            rb.velocity = Vector2.right * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
+            if (Stopmoving == true)
+            {
+                Attack4();
+                break;
+            }
 
             // Move down for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.down * EnemySpeed;
+            rb.velocity = Vector2.down * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
+            if (Stopmoving == true)
+            {
+                Attack4();
+                break;
+            }
 
             // Move left for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.left * EnemySpeed;
+            rb.velocity = Vector2.left * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
+            if (Stopmoving == true)
+            {
+                Attack4();
+                break;
+            }
 
             // Move up for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * EnemySpeed;
+            rb.velocity = Vector2.up * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
+            if (Stopmoving == true)
+            {
+                Attack4();
+                break;
+            }
+        }
+    }
+
+    public void Attack4()
+    {
+        if (bulletsSpawned < totalBullets)
+        {
+            float fixedDelay = 0.1f;
+            StartCoroutine(SpawnBulletsWithDelay(fixedDelay));
+        }
+        else
+        {
+            Stopmoving = false;  // Reset the flag
+            bulletsSpawned = 0;  // Reset the count
+            rb.isKinematic = true;  // Resume using physics for collisions
+            StartCoroutine(MoveBossInBox());
+        }
+    }
+
+    private IEnumerator SpawnBulletsWithDelay(float delay)
+    {
+        for (int i = 0; i < totalBullets; i++)
+        {
+            SpawnHomingBullet();
+            yield return new WaitForSeconds(delay);
         }
 
-        // Stop moving when the boss is defeated or some other condition
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        Stopmoving = true;  // Set the flag to stop moving
+        rb.isKinematic = false;  // Disable physics for collisions during bullet attack
+        yield return new WaitUntil(() => bulletsSpawned >= totalBullets);
+    }
+
+    private IEnumerator WaitForBulletsToFinish()
+    {
+        yield return new WaitUntil(() => bulletsSpawned >= totalBullets);
+    }
+
+    void SpawnHomingBullet()
+    {
+        Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+        GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
+
+        Destroy(bullet, bulletLife);
+
+        bulletsSpawned++;
+
+        if (bulletsSpawned >= totalBullets)
+        {
+            CancelInvoke("SpawnHomingBullet");
+            Stopmoving = false;
+            StartCoroutine(MoveBossInBox());
+        }
     }
 }

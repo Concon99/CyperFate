@@ -2620,7 +2620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab855a46191d4ec47b9010d474c4bf22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 18
+  sceneBuildIntext: 12
   transation: {fileID: 1473823997}
   transationTime: 0
   _DialogueManager: {fileID: 1473823996}

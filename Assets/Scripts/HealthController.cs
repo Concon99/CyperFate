@@ -6,33 +6,56 @@ using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
-    public int PlayerHealth;
+    // Singleton instance
+    private static HealthController _instance;
+
+    // Public property to access the singleton instance
+    public static HealthController Instance
+    {
+        get
+        {
+            // If there is no instance, find it in the scene
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<HealthController>();
+
+                // If still null, create a new instance
+                if (_instance == null)
+                {
+                    GameObject obj = new GameObject("HealthController");
+                    _instance = obj.AddComponent<HealthController>();
+                }
+            }
+
+            return _instance;
+        }
+    }
+
+    public int PlayerHealth = 5;
     public int damage;
 
-    [SerializeField] private Image[] hearts; //Creating a Array for the hearts (the three hearts)
-    
-    void Start() 
+    [SerializeField] private Image[] hearts;
+
+    void Start()
     {
         UpdateHealth();
     }
 
-
     public void UpdateHealth()
     {
-        for (int i = 0; i < hearts.Length; i++) /*searches through the array to check if i is less then the array 
-        and then if its good it will increase by 1 (i++) untill it stops */
+        for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < PlayerHealth) //if i is lower then player Health
+            if (i < PlayerHealth)
             {
-                hearts[i].color = Color.red; //make the heart red or alive (will probably change this later)
+                hearts[i].color = Color.red;
             }
-            else //if i is higher then player Health
+            else
             {
-                hearts[i].color = Color.black; //make the heart black/white or dead (will probably change this later)
+                hearts[i].color = Color.black;
             }
         }
 
-        if(PlayerHealth == 0)
+        if (PlayerHealth == 0)
         {
             SceneManager.LoadScene("GameOver");
         }
