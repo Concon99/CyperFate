@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5804111136162789108}
   - component: {fileID: 9180029386056687327}
   - component: {fileID: 1244846574742496206}
+  - component: {fileID: 5668021593044586049}
   m_Layer: 0
   m_Name: lighting 2
   m_TagString: Untagged
@@ -163,3 +164,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   lifetime: 3
+--- !u!114 &5668021593044586049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871226687996098561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e083b0f6b46585f4ba67f5e495e03ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyDamage: 1

@@ -12,13 +12,13 @@ public class Boss2movement : MonoBehaviour
     public int totalBullets = 15;
     public float bulletSpeed = 5f;
     public float bulletLife = 3f;
-    public float minSpawnInterval = 0.1f;
-    public float maxSpawnInterval = 0.5f;
     private int bulletsSpawned = 0;
     public float randomDelay;
+    private Rigidbody2D rb;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         StartCoroutine(MoveBossInBox());
     }
 
@@ -32,61 +32,71 @@ public class Boss2movement : MonoBehaviour
         while (_BossHealth.BHealth > 0f)
         {
             // Move right for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.right * EnemySpeed;
+            rb.velocity = Vector2.right * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
             if (Stopmoving == true)
             {
-                break;
                 Attack4();
+                break;
             }
             // Move down for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.down * EnemySpeed;
+            rb.velocity = Vector2.down * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
             if (Stopmoving == true)
             {
-                break;
                 Attack4();
+                break;
             }
             // Move left for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.left * EnemySpeed;
+            rb.velocity = Vector2.left * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
             if (Stopmoving == true)
             {
-                break;
                 Attack4();
+                break;
             }
             // Move up for a specified distance
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * EnemySpeed;
+            rb.velocity = Vector2.up * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
             if (Stopmoving == true)
             {
-                break;
                 Attack4();
+                break;
             }
         }
 
         // Stop moving when the boss is defeated or some other condition
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        rb.velocity = Vector2.zero;
     }
-
 
     public void Attack4()
     {
-        StartCoroutine(SpawnBulletsWithDelay());
+        if (bulletsSpawned < totalBullets)
+        {
+            float fixedDelay = 0.1f;
+            StartCoroutine(SpawnBulletsWithDelay(fixedDelay));
+        }
+        else
+        {
+            Stopmoving = false;  // Reset the flag
+            bulletsSpawned = 0;  // Reset the count
+            rb.isKinematic = true;  // Resume using physics for collisions
+            StartCoroutine(MoveBossInBox());
+        }
     }
 
-    private IEnumerator SpawnBulletsWithDelay()
-{
-    float fixedDelay = 0.1f;
-
-    for (int i = 0; i < totalBullets; i++)
+    private IEnumerator SpawnBulletsWithDelay(float delay)
     {
-        SpawnHomingBullet();
-        yield return new WaitForSeconds(fixedDelay);
-    }
+        for (int i = 0; i < totalBullets; i++)
+        {
+            SpawnHomingBullet();
+            yield return new WaitForSeconds(delay);
+        }
 
-    Stopmoving = false;
-}
+        Stopmoving = true;  // Set the flag to stop moving
+        rb.isKinematic = false;  // Disable physics for collisions during bullet attack
+        yield return new WaitUntil(() => bulletsSpawned >= totalBullets);
+    }
 
     private IEnumerator WaitForBulletsToFinish()
     {
@@ -98,7 +108,7 @@ public class Boss2movement : MonoBehaviour
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
-        
+
         Destroy(bullet, bulletLife);
 
         bulletsSpawned++;
@@ -107,6 +117,7 @@ public class Boss2movement : MonoBehaviour
         {
             CancelInvoke("SpawnHomingBullet");
             Stopmoving = false;
+            StartCoroutine(MoveBossInBox());
         }
     }
 }

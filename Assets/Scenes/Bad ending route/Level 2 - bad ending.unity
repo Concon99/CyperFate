@@ -601,17 +601,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &373859625 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7871226687996098561, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
-  m_PrefabInstance: {fileID: 778298124}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &373859629 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5411976635636375557, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
   m_PrefabInstance: {fileID: 778298124}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373859625}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5acdc6ab14a5a024f9874d3a96e0f11e, type: 3}
@@ -772,8 +767,8 @@ Transform:
   m_GameObject: {fileID: 549893745}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2274, y: -21.707, z: 0.044200577}
-  m_LocalScale: {x: 88.82242, y: 38.8316, z: 1}
+  m_LocalPosition: {x: -4.1327, y: -21.7824, z: 0.044200577}
+  m_LocalScale: {x: 90.6344, y: 38.680157, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334028912}
@@ -2792,8 +2787,8 @@ GameObject:
   - component: {fileID: 1824222504}
   - component: {fileID: 1824222509}
   - component: {fileID: 1824222510}
-  - component: {fileID: 1824222511}
   - component: {fileID: 1824222512}
+  - component: {fileID: 1824222513}
   m_Layer: 0
   m_Name: sBoss
   m_TagString: Untagged
@@ -2825,7 +2820,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824222503}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2970,31 +2965,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e4b551b65a5f54f94a8e65d0563d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySpeed: 30
+  EnemySpeed: 15
   _BossHealth: {fileID: 1824222504}
   MoveDistance: 50
   WaitTime: 2
   Stopmoving: 0
-  bulletPrefab: {fileID: 373859625}
-  totalBullets: 15
-  bulletSpeed: 5
-  bulletLife: 3
-  minSpawnInterval: 0.1
-  maxSpawnInterval: 0.5
+  bulletPrefab: {fileID: 7871226687996098561, guid: d0a4c1e82d225ac40b01604bc1cfc23d, type: 3}
+  totalBullets: 10
+  bulletSpeed: 3
+  bulletLife: 5
   randomDelay: 0.1
---- !u!114 &1824222511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824222503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e083b0f6b46585f4ba67f5e495e03ee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyDamage: 1
 --- !u!114 &1824222512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3008,12 +2988,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7871226687996098561, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
-  totalBullets: 15
+  totalBullets: 10
   bulletSpeed: 0
   bulletLife: 2
   minSpawnInterval: 1
   maxSpawnInterval: 2
   randomDelay: 0
+--- !u!60 &1824222513
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824222503}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.14, y: 1.22}
+      - {x: -1.14, y: -1.1999999}
+      - {x: -1.12, y: -1.22}
+      - {x: 1.22, y: -1.22}
+      - {x: 1.22, y: 1.22}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1827565991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,8 +3144,8 @@ Transform:
   m_GameObject: {fileID: 1870008439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.9653, y: 34.5003, z: 0.044200577}
-  m_LocalScale: {x: 50.37463, y: 126.92363, z: 1}
+  m_LocalPosition: {x: -72.0777, y: 34.5003, z: 0.044200577}
+  m_LocalScale: {x: 46.1482, y: 126.92363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334028912}

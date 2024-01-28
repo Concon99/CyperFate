@@ -16,7 +16,7 @@ public class B2Attack4 : MonoBehaviour
         moveDirection = (playerTransform.position - transform.position).normalized;
 
         // Add a random rotation when spawning
-        float randomRotation = Random.Range(15f, -15f);
+        float randomRotation = Random.Range(30f, -30f);
         transform.Rotate(Vector3.forward, randomRotation);
 
         StartCoroutine(DestroyAfterLifetime());
