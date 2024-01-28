@@ -16,6 +16,8 @@ public class Boss2movement : MonoBehaviour
     public float randomDelay;
     private Rigidbody2D rb;
 
+    public Vector2 TargetPosition = new Vector2(0f, 0f); // Specify the desired destination coordinates
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +41,7 @@ public class Boss2movement : MonoBehaviour
                 Attack4();
                 break;
             }
+
             // Move down for a specified distance
             rb.velocity = Vector2.down * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
@@ -47,6 +50,7 @@ public class Boss2movement : MonoBehaviour
                 Attack4();
                 break;
             }
+
             // Move left for a specified distance
             rb.velocity = Vector2.left * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
@@ -55,6 +59,7 @@ public class Boss2movement : MonoBehaviour
                 Attack4();
                 break;
             }
+
             // Move up for a specified distance
             rb.velocity = Vector2.up * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
@@ -64,9 +69,6 @@ public class Boss2movement : MonoBehaviour
                 break;
             }
         }
-
-        // Stop moving when the boss is defeated or some other condition
-        rb.velocity = Vector2.zero;
     }
 
     public void Attack4()

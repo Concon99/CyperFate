@@ -34,8 +34,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Bad ending route/Level 2 - bad ending.unity
     guid: 12507262cbfa87941a7ef8f86bf12ea8
   - enabled: 1
-    path: Assets/Scenes/Good ending route/Level 2 - good  ending.unity
-    guid: a2507e7cca5c0dd499c3d6db7c2d111c
+    path: Assets/Scenes/Good ending route/Level 2 - good ending.unity
+    guid: 357c4c07e53553b4ba3c17684bfa8744
   - enabled: 1
     path: Assets/Scenes/Bad ending route/level 2 boss dead bad ending.unity
     guid: ec7ff32250c139149b5a2600766e9c45

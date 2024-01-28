@@ -2526,7 +2526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 1
-  _healthController: {fileID: 1096658464}
 --- !u!1 &1568226647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2829,7 @@ MonoBehaviour:
   PlayerDamage: 1
   bHealth: 100
   bHealthMax: 100
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 610538154}
 --- !u!50 &1824222505
 Rigidbody2D:
   serializedVersion: 4
@@ -3034,7 +3033,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 1
-  _healthController: {fileID: 1096658464}
 --- !u!1 &1827565991
 GameObject:
   m_ObjectHideFlags: 0
