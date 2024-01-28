@@ -29,6 +29,14 @@ public class BossHealth : MonoBehaviour
         {
             BDamage();
         }
+        if (collision.CompareTag("Lazer")) //laser damage 
+        {
+            for(int i = 0; i < 50; i++)
+            {
+                BDamage();
+            }
+            
+        }
     }
 
     void BDamage()
