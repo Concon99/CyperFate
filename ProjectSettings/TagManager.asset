@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Lazer
+  - arm
   layers:
   - Default
   - TransparentFX

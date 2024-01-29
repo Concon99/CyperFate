@@ -1433,8 +1433,7 @@ MonoBehaviour:
     - character:
         name: 
         icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
-      line: Robotic eyes - Gives the ability to shoot a charged attack with space
-        or z.
+      line: Robotic eyes - Gives the ability to shoot a charged attack with space.
   Hastriggered: 0
 --- !u!1 &762526831
 GameObject:
@@ -1803,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1109080038}
-  speed: 10
+  speed: 15
   weapon: {fileID: 1725765152}
 --- !u!212 &1109080040
 SpriteRenderer:
