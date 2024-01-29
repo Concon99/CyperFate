@@ -14,6 +14,14 @@ public class Transations : MonoBehaviour
     {
         if (!_DialogueManager.isDialogueActive && other.tag == "Player" )
         {
+            if (_DialogueManager.Robotic_item)
+            {
+             sceneBuildIntext = 12;
+            }
+            if (!_DialogueManager.Robotic_item)
+            {
+             sceneBuildIntext = 13;
+            }
             print("Trigger entered");
             transation.SetTrigger("Fadein"); // Causing the fade-in transition
             StartCoroutine(TransitionToScene(other));

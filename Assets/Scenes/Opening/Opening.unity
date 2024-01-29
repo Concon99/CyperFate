@@ -1826,7 +1826,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6706491521359076986, guid: e8405aed6adb44a41bed2000d83fa99a, type: 3}
   firePoint: {fileID: 10231867}
   fireForce: 20
-  _animator: {fileID: 0}
+  _animator: {fileID: 1870481591}
 --- !u!4 &1005921465
 Transform:
   m_ObjectHideFlags: 0
@@ -2801,7 +2801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1870481593}
-  speed: 10
+  speed: 15
   weapon: {fileID: 1005921464}
 --- !u!212 &1870481595
 SpriteRenderer:

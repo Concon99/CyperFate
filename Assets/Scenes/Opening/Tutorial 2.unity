@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 1302305208}
   - component: {fileID: 1302305207}
   - component: {fileID: 1302305206}
-  - component: {fileID: 1302305205}
+  - component: {fileID: 1302305210}
   m_Layer: 0
   m_Name: box 3
   m_TagString: Untagged
@@ -1549,22 +1549,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1302305205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302305204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ebdc8e6e93f2d47881202589357867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerDamage: 1
-  bHealth: 5
-  bHealthMax: 100
-  healthbar: {fileID: 0}
 --- !u!50 &1302305206
 Rigidbody2D:
   serializedVersion: 4
@@ -1704,6 +1688,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302305210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302305204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDamage: 1
+  bHealth: 10
+  bHealthMax: 10
 --- !u!1 &1339319261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,13 +2312,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488192286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ebdc8e6e93f2d47881202589357867, type: 3}
+  m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 1
-  bHealth: 5
-  bHealthMax: 100
-  healthbar: {fileID: 0}
+  bHealth: 10
+  bHealthMax: 10
 --- !u!1 &1575220406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,7 +2458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1575220410}
-  speed: 10
+  speed: 15
   weapon: {fileID: 1674332176}
 --- !u!212 &1575220412
 SpriteRenderer:
@@ -2721,7 +2719,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6706491521359076986, guid: e8405aed6adb44a41bed2000d83fa99a, type: 3}
   firePoint: {fileID: 378590761}
   fireForce: 20
-  _animator: {fileID: 0}
+  _animator: {fileID: 1575220408}
 --- !u!4 &1674332177
 Transform:
   m_ObjectHideFlags: 0
@@ -2868,7 +2866,7 @@ Transform:
   m_GameObject: {fileID: 1841231676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.9, y: 56.1, z: 0}
+  m_LocalPosition: {x: -27.9, y: 52.2, z: 0}
   m_LocalScale: {x: 5.2485, y: 4.7331, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3961,7 +3959,7 @@ GameObject:
   - component: {fileID: 2105260683}
   - component: {fileID: 2105260682}
   - component: {fileID: 2105260681}
-  - component: {fileID: 2105260680}
+  - component: {fileID: 2105260685}
   m_Layer: 0
   m_Name: box 2
   m_TagString: Untagged
@@ -3969,22 +3967,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2105260680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105260679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ebdc8e6e93f2d47881202589357867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerDamage: 1
-  bHealth: 5
-  bHealthMax: 100
-  healthbar: {fileID: 0}
 --- !u!50 &2105260681
 Rigidbody2D:
   serializedVersion: 4
@@ -4124,6 +4106,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2105260685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105260679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDamage: 1
+  bHealth: 10
+  bHealthMax: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

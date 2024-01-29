@@ -709,7 +709,7 @@ Transform:
   m_GameObject: {fileID: 448856751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.4, y: -10.3, z: -10}
+  m_LocalPosition: {x: -43.4, y: -6.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -880,10 +880,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 14
+  sceneBuildIntext: 8
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
+--- !u!1 &625136614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9065669033917382851, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+  m_PrefabInstance: {fileID: 1209903192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &648785811
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +904,7 @@ GameObject:
   - component: {fileID: 648785814}
   - component: {fileID: 648785813}
   - component: {fileID: 648785812}
+  - component: {fileID: 648785819}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -1024,7 +1030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 648785815}
-  speed: 10
+  speed: 15
   weapon: {fileID: 1044262206}
 --- !u!212 &648785817
 SpriteRenderer:
@@ -1087,13 +1093,28 @@ Transform:
   m_GameObject: {fileID: 648785811}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.6177911, w: 0.78634226}
-  m_LocalPosition: {x: -26.4, y: -10.3, z: 0}
+  m_LocalPosition: {x: -43.4, y: -6.2, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1044262207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &648785819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648785811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c72938b716fa5419626c37b1adf22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireDelay: 15
+  Lazer: {fileID: 625136614}
+  firePoint: {fileID: 977792671}
 --- !u!1 &663861015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1531,8 @@ MonoBehaviour:
     - character:
         name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: That's part of the process! Practice on the target if you need to.
+      line: Thats part of the process! Press space to shoot the lazer. It will have
+        a cooldown after you shoot it. Use the target as pratice!
   Hastriggered: 0
 --- !u!1 &782196929
 GameObject:
@@ -1934,7 +1956,7 @@ GameObject:
   - component: {fileID: 1047909592}
   - component: {fileID: 1047909591}
   - component: {fileID: 1047909590}
-  - component: {fileID: 1047909589}
+  - component: {fileID: 1047909594}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -1942,22 +1964,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1047909589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1047909588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ebdc8e6e93f2d47881202589357867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerDamage: 1
-  bHealth: 100
-  bHealthMax: 100
-  healthbar: {fileID: 0}
 --- !u!50 &1047909590
 Rigidbody2D:
   serializedVersion: 4
@@ -2097,6 +2103,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047909594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047909588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDamage: 1
+  bHealth: 50
+  bHealthMax: 50
+--- !u!1001 &1209903192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -265.46048
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.887634
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841311253543098094, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065669033917382851, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
+      propertyPath: m_Name
+      value: Lazer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
 --- !u!1 &1212964789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,7 +3641,7 @@ Transform:
   m_GameObject: {fileID: 1934627597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.4, y: -10.3, z: -10}
+  m_LocalPosition: {x: -43.4, y: -6.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4303,3 +4381,4 @@ SceneRoots:
   - {fileID: 2119560710}
   - {fileID: 1047909593}
   - {fileID: 888689407}
+  - {fileID: 1209903192}
