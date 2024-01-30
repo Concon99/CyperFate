@@ -1521,8 +1521,8 @@ MonoBehaviour:
     - character:
         name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: Just wait a little longer, and the stinging will end! You're halfway
-        to the end!
+      line: Just wait a little longer, and the stinging will end! You're almost at
+        the emd!
   Hastriggered: 0
 --- !u!1 &895450920
 GameObject:

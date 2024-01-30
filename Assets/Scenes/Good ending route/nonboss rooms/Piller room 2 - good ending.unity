@@ -1371,18 +1371,10 @@ MonoBehaviour:
       line: Alright, well, that's okay! This place is for testing, but I would highly
         recommend you take the parts. They can come in handy!
     - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: The bosses will get harder, and you will need them later! Don't worry;
-        if you collect a part, the rest you left before will attach to you!
-    - character:
         name: Player
-        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
-      line: how?
-    - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: I'll attach them to you!
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
+      line: The bosses will get harder, and you will need them later! Make sure to
+        take the final object its important.
   Hastriggered: 0
 --- !u!1 &722286482
 GameObject:

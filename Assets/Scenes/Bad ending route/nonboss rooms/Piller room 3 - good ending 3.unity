@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 14
+  sceneBuildIntext: 20
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
@@ -1443,7 +1443,7 @@ MonoBehaviour:
     - character:
         name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: Past this point is the elevator! I'll see you later!
+      line: Past this point is the elevator! I'll see you soon!
   Hastriggered: 0
 --- !u!1 &755307118
 GameObject:
