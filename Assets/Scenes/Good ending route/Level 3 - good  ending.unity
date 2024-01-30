@@ -1477,7 +1477,6 @@ GameObject:
   - component: {fileID: 831951790}
   - component: {fileID: 831951793}
   - component: {fileID: 831951794}
-  - component: {fileID: 831951795}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -1673,21 +1672,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35265443, y: 0.35189605}
   m_EdgeRadius: 0
---- !u!114 &831951795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831951783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c72938b716fa5419626c37b1adf22d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fireDelay: 15
-  Lazer: {fileID: 9065669033917382851, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
-  firePoint: {fileID: 2015912900}
 --- !u!1 &931296234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3589,7 +3573,7 @@ MonoBehaviour:
   _B3Attack4: {fileID: 512609850}
   WaitTime: 5
   TimeBeforeAttacks: 3
-  sceneBuildIntext: 0
+  sceneBuildIntext: 17
 --- !u!1 &2124863490
 GameObject:
   m_ObjectHideFlags: 3

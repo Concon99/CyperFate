@@ -2651,10 +2651,9 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        name: player
+        name: ' '
         icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
-      line: "Robotic arms - Gives the ability to automatically fire when pressing
-        c. In exchange you will lose humanity. \n"
+      line: Brain - Makes you lose all humanity.
   Hastriggered: 0
 --- !u!61 &1691312723
 BoxCollider2D:
