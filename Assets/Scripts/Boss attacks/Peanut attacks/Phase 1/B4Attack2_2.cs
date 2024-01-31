@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class B4Attack2_2 : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class B4Attack2_2 : MonoBehaviour
     public float maxSpawnInterval = 0.5f;
     public float rotationSpeed = 5f;
     private Transform playerTransform;
+
 
     void Start()
     {
@@ -34,5 +36,10 @@ public class B4Attack2_2 : MonoBehaviour
         Vector3 directionToPlayer = playerTransform.position - transform.position; // Assigning vector3 to player
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, -directionToPlayer) * Quaternion.Euler(0, 0, -90);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
+    public void Phase2()
+    {
+        Destroy(gameObject);
     }
 }

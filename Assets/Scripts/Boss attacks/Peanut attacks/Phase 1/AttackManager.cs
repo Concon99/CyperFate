@@ -9,13 +9,16 @@ public class AttackManager : MonoBehaviour
     public Transform spawner3;
     public Transform spawner4;
     public bool Attacking;
+    public CanvasGroup canvasGroup;
 
-    [SerializeField] private BossHealth _BossHealth;
+    [SerializeField] private PeanutBoss _PeanutBoss;
     [SerializeField] private B4Attack1 _B4Attack1;
     [SerializeField] private B4Attack1_2 _B4Attack1_2;
     [SerializeField] private B4Attack2 _B4Attack2;
     [SerializeField] private B4Attack2_4 _B4Attack2_4;
     [SerializeField] private B4Attack3 _B4Attack3;
+    [SerializeField] private B4Attack4 _B4Attack4;
+    [SerializeField] private HealthController _HealthController;
 
 
     // Start is called before the first frame update
@@ -28,10 +31,13 @@ public class AttackManager : MonoBehaviour
 
     IEnumerator Movement()
     {
-        while (_BossHealth.BHealth > 0)
+        while (_PeanutBoss.BHealth > 0)
         {
+            canvasGroup.alpha = .3f;
             transform.position = spawner1.position;
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            yield return new WaitForSeconds(0.3f);
+            canvasGroup.alpha = 0f;
 
             while (!Attacking)
             {
@@ -40,9 +46,11 @@ public class AttackManager : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.5f);
-
+            canvasGroup.alpha = .3f;
             transform.position = spawner2.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+            yield return new WaitForSeconds(0.3f);
+            canvasGroup.alpha = 0f;
 
             while (!Attacking)
             {
@@ -51,9 +59,13 @@ public class AttackManager : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.5f);
+            canvasGroup.alpha = .3f;
 
             transform.position = spawner3.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -180f);
+            yield return new WaitForSeconds(0.3f);
+            canvasGroup.alpha = 0f;            
+            
 
             while (!Attacking)
             {
@@ -62,6 +74,7 @@ public class AttackManager : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.5f);
+            canvasGroup.alpha = .3f;
 
             transform.position = spawner4.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -270f);
@@ -74,16 +87,17 @@ public class AttackManager : MonoBehaviour
 
             yield return new WaitForSeconds(1.5f);
         }
+
     }
 
     private IEnumerator FightStart()
     {
-        while (_BossHealth.BHealth > 0)
+        while (_PeanutBoss.BHealth > 0)
         {
             int WaitTime = Random.Range(3,8);
             yield return new WaitForSeconds(WaitTime);
 
-                int randomAttack = Random.Range(1, 4);
+                int randomAttack = Random.Range(1, 5);
                 
                 if (randomAttack == 1)
                 {
@@ -119,7 +133,8 @@ public class AttackManager : MonoBehaviour
                 {
                     Debug.Log("Attack 4");
                     Attacking = true;
-                    yield return new WaitForSeconds(3);
+                    _B4Attack4.Attack4();
+                    yield return new WaitForSeconds(3f);
                     Attacking = false;
                 }
 
@@ -128,4 +143,5 @@ public class AttackManager : MonoBehaviour
 
             yield return null;  // Adjust the yield statement as needed
     }
-} 
+
+}

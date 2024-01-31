@@ -41,4 +41,9 @@ public class B4Attack1 : MonoBehaviour
         }
         bulletsSpawned = 0;
     }
+
+    public void Phase2()
+    {
+        Destroy(gameObject);
+    }
 }

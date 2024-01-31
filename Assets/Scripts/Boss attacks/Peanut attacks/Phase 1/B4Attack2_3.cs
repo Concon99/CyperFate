@@ -29,4 +29,9 @@ public class B4Attack2_3 : MonoBehaviour
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
+
+    public void Phase2()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -3015,8 +3015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 1
-  bHealth: 300
-  bHealthMax: 300
+  bHealth: 200
+  bHealthMax: 200
   healthbar: {fileID: 2060130685}
 --- !u!50 &1824222505
 Rigidbody2D:
