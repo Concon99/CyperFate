@@ -13,12 +13,26 @@ public class B3Attack3 : MonoBehaviour
     public float minXPosition = -2f;
     public float maxXPosition = 2f;
     private int bulletsSpawned = 0;
+    private Coroutine attackCoroutine; // Keep track of the running coroutine
 
     void Start()
     {
     }
 
-    public IEnumerator Attack3()
+    public void Attack3()
+    {
+        // Check if the coroutine is already running, and stop it if needed
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            ResetState();
+        }
+
+        // Start the new attack coroutine
+        attackCoroutine = StartCoroutine(StartAttack());
+    }
+
+    public IEnumerator StartAttack()
     {
         while (bulletsSpawned < totalBullets)
         {
@@ -58,7 +72,7 @@ public class B3Attack3 : MonoBehaviour
 
         if (bulletsSpawned >= totalBullets)
         {
-            StopCoroutine(Attack3()); // Stop spawning when totalBullets is reached
+            StopCoroutine(attackCoroutine); // Stop spawning when totalBullets is reached
         }
     }
 

@@ -23,8 +23,5 @@ public class B4Attack2 : MonoBehaviour
         
     }
 
-    public void Phase2()
-    {
-        Destroy(gameObject);
-    }
+
 }

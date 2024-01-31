@@ -38,8 +38,5 @@ public class B4Attack2_2 : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    public void Phase2()
-    {
-        Destroy(gameObject);
-    }
+
 }

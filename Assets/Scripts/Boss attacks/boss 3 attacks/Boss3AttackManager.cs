@@ -43,7 +43,7 @@ public class Boss3attackManager : MonoBehaviour
             if (randomAttack == 3)
             {
                 print("Performing Attack 3");
-                StartCoroutine(_B3Attack3.Attack3());
+                _B3Attack3.Attack3();
             }
             if (randomAttack == 4)
             {

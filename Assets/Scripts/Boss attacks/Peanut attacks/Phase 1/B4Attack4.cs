@@ -31,8 +31,5 @@ public class B4Attack4 : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 
-    public void Phase2()
-    {
-        Destroy(gameObject);
-    }
+
 }
