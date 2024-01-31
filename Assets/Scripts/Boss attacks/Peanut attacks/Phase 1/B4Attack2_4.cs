@@ -10,7 +10,6 @@ public class B4Attack2_4 : MonoBehaviour
     
     void Start()
     {
-        Attack2();
     }
 
     

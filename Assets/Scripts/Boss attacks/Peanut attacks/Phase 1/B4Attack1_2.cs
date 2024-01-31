@@ -37,7 +37,6 @@ public class B4Attack1_2 : MonoBehaviour
             SpawnBullet();
         }
 
-        Debug.Log("Exiting Attack2");
 
         // Reset bulletsSpawned and the coroutine reference
         bulletsSpawned = 0;

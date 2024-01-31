@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 public class AttackManager : MonoBehaviour
@@ -11,8 +11,12 @@ public class AttackManager : MonoBehaviour
     public bool Attacking;
 
     [SerializeField] private BossHealth _BossHealth;
-    [SerializeField] private B4Attack4 _B4Attack4;
+    [SerializeField] private B4Attack1 _B4Attack1;
     [SerializeField] private B4Attack1_2 _B4Attack1_2;
+    [SerializeField] private B4Attack2 _B4Attack2;
+    [SerializeField] private B4Attack2_4 _B4Attack2_4;
+    [SerializeField] private B4Attack3 _B4Attack3;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +39,7 @@ public class AttackManager : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
 
             transform.position = spawner2.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -90f);
@@ -46,7 +50,7 @@ public class AttackManager : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
 
             transform.position = spawner3.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -180f);
@@ -57,7 +61,7 @@ public class AttackManager : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
 
             transform.position = spawner4.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -270f);
@@ -68,7 +72,7 @@ public class AttackManager : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 
@@ -79,13 +83,13 @@ public class AttackManager : MonoBehaviour
             int WaitTime = Random.Range(3,8);
             yield return new WaitForSeconds(WaitTime);
 
-                int randomAttack = Random.Range(1, 1);
+                int randomAttack = Random.Range(1, 4);
                 
                 if (randomAttack == 1)
                 {
                     Debug.Log("Attack 1");
                     Attacking = true;
-                    _B4Attack4.Attack1();
+                    _B4Attack1.Attack1();
                     _B4Attack1_2.Attack1();
                     yield return new WaitForSeconds(5);
                     Attacking = false;
@@ -96,7 +100,9 @@ public class AttackManager : MonoBehaviour
                 {
                     Debug.Log("Attack 2");
                     Attacking = true;
-                    yield return new WaitForSeconds(2);
+                    _B4Attack2.Attack2();
+                    _B4Attack2_4.Attack2();
+                    yield return new WaitForSeconds(10);
                     Attacking = false;
                 }
 
@@ -104,7 +110,8 @@ public class AttackManager : MonoBehaviour
                 {
                     Debug.Log("Attack 3");
                     Attacking = true;
-                    yield return new WaitForSeconds(3);
+                    _B4Attack3.Attack3();
+                    yield return new WaitForSeconds(5);
                     Attacking = false;
                 }
 
@@ -121,4 +128,4 @@ public class AttackManager : MonoBehaviour
 
             yield return null;  // Adjust the yield statement as needed
     }
-} */
+} 

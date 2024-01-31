@@ -32,7 +32,7 @@ public class B4Attack2_2 : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         Vector3 directionToPlayer = playerTransform.position - transform.position; // Assigning vector3 to player
-        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, -directionToPlayer * 2); // Making the object lock
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, -directionToPlayer) * Quaternion.Euler(0, 0, -90);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }

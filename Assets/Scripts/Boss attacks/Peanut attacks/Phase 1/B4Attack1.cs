@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class B4Attack4 : MonoBehaviour
+public class B4Attack1 : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public int totalBullets = 15;

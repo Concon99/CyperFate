@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Lazer
   - arm
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageController : MonoBehaviour
@@ -9,15 +8,17 @@ public class DamageController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        {
-            // Access the HealthController instance using the singleton pattern
-            HealthController healthController = HealthController.Instance;
-            
-            // Damage the player
-            healthController.PlayerHealth -= EnemyDamage;
+            StartCoroutine(DamageCoroutine());
+    }
 
-            // Call the UpdateHealth function inside the HealthController script to update the visual representation of health
-            healthController.UpdateHealth();
-        }
+    private IEnumerator DamageCoroutine()
+    {
+        HealthController healthController = HealthController.Instance;
+
+        healthController.PlayerHealth -= EnemyDamage;
+
+        healthController.UpdateHealth();
+
+        yield return new WaitForSeconds(1.0f); // Adjust the delay time as needed
     }
 }
