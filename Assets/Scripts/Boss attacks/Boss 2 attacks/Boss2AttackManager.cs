@@ -27,29 +27,24 @@ public class Boss2AttackManager : MonoBehaviour
         while (_BossHealth.BHealth > 0f)
         {
             print("New attack");
-            int randomAttack = Random.Range(1, 5);
+            int randomAttack = Random.Range(1, 4);
 
             print(randomAttack);
 
             if (randomAttack == 1)
             {
                 print("Performing Attack 1");
-                _EnemyBulletSpawner.Attack1();
+                // No need to call _EnemyBulletSpawner.Attack1() here
             }
             else if (randomAttack == 2)
             {
                 print("Performing Attack 2");
-                _B2Attack2.Attack2();
+                _B2Attack2.Attack2();  // Keep this line if Attack2() method exists
             }
             else if (randomAttack == 3)
             {
                 print("Performing Attack 3");
-                _B2Attack3.Attack3();
-            }
-            else if (randomAttack == 4)
-            {
-                print("Triggering Attack 4");
-                _Boss2movement.Attack4();
+                _B2Attack3.Attack3();  // Keep this line if Attack3() method exists
             }
 
             yield return new WaitForSeconds(WaitTime);

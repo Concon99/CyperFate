@@ -65,6 +65,7 @@ public class PeanutBoss : MonoBehaviour
             }
             _HealthController.PlayerHealth = 5;
             _Boss4attackManager.Phase2();
+            healthbar.UpdateHealthBar(bHealth, bHealthMax);
             Destroy(gameObject);
         }
     }

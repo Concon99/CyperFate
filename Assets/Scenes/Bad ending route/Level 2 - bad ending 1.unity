@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 205593736}
   - component: {fileID: 205593735}
   - component: {fileID: 205593734}
+  - component: {fileID: 205593733}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -582,6 +583,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &205593733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205593732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c72938b716fa5419626c37b1adf22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireDelay: 0.5
+  Lazer: {fileID: 0}
+  firePoint: {fileID: 0}
+  charge: 0
+  chargemax: 0
+  _EyeCharge: {fileID: 0}
 --- !u!61 &205593734
 BoxCollider2D:
   m_ObjectHideFlags: 0

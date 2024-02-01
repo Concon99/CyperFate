@@ -2666,7 +2666,7 @@ MonoBehaviour:
     - character:
         name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: It seems you're missing the point of why you're here player.
+      line: alright genuinely whats your problem?
     - character:
         name: Peanut
         icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
@@ -2674,8 +2674,16 @@ MonoBehaviour:
     - character:
         name: Peanut
         icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: I suggest you go back and collect those parts.
-  Hastriggered: 0
+      line: I'm SICK OF THIS
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: Enter the next room and I will terminate you.
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: Choose Wisely.
+  Hastriggered: 1
 --- !u!61 &1618844681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3659,7 +3667,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a29e845ed06e11a4ba505cc7f4fc0682, type: 3}
-  m_Color: {r: 0.42075467, g: 0.58480513, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

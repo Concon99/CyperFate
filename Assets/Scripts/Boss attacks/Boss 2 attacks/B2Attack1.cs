@@ -4,29 +4,29 @@ using UnityEngine;
 public class B2Attack1 : MonoBehaviour
 {
     public float speed = 5f;
-    public float lifetime = 3f; // Time before the bullet is destroyed
+    public float lifetime = 3f;
 
     private Transform playerTransform;
     private Vector2 moveDirection;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         moveDirection = (playerTransform.position - transform.position).normalized;
-        StartCoroutine(DestroyAfterLifetime());
+        StartCoroutine(MoveAndDestroy());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator MoveAndDestroy()
     {
-        // Move in a straight line
-        transform.Translate(moveDirection * speed * Time.deltaTime);
-    }
+        float elapsedTime = 0f;
 
-    IEnumerator DestroyAfterLifetime()
-    {
-        yield return new WaitForSeconds(lifetime);
+        while (elapsedTime < lifetime)
+        {
+            transform.Translate(moveDirection * speed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
         Destroy(gameObject);
     }
 }

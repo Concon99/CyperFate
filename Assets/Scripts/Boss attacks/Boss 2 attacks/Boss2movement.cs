@@ -36,56 +36,23 @@ public class Boss2movement : MonoBehaviour
             // Move right for a specified distance
             rb.velocity = Vector2.right * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
-            if (Stopmoving == true)
-            {
-                Attack4();
-                break;
-            }
+
 
             // Move down for a specified distance
             rb.velocity = Vector2.down * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
-            if (Stopmoving == true)
-            {
-                Attack4();
-                break;
-            }
 
             // Move left for a specified distance
             rb.velocity = Vector2.left * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
-            if (Stopmoving == true)
-            {
-                Attack4();
-                break;
-            }
 
             // Move up for a specified distance
             rb.velocity = Vector2.up * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
-            if (Stopmoving == true)
-            {
-                Attack4();
-                break;
-            }
         }
     }
 
-    public void Attack4()
-    {
-        if (bulletsSpawned < totalBullets)
-        {
-            float fixedDelay = 0.1f;
-            StartCoroutine(SpawnBulletsWithDelay(fixedDelay));
-        }
-        else
-        {
-            Stopmoving = false;  // Reset the flag
-            bulletsSpawned = 0;  // Reset the count
-            rb.isKinematic = true;  // Resume using physics for collisions
-            StartCoroutine(MoveBossInBox());
-        }
-    }
+
 
     private IEnumerator SpawnBulletsWithDelay(float delay)
     {

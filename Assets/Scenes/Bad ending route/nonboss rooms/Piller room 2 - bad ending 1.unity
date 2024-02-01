@@ -1259,6 +1259,9 @@ MonoBehaviour:
   _fireDelay: 15
   Lazer: {fileID: 9065669033917382851, guid: cf05871ea78595e49bf334a235799e5d, type: 3}
   firePoint: {fileID: 977792671}
+  charge: 0
+  chargemax: 0
+  _EyeCharge: {fileID: 0}
 --- !u!1 &712093478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,7 +2111,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a29e845ed06e11a4ba505cc7f4fc0682, type: 3}
-  m_Color: {r: 0.42075467, g: 0.58480513, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
