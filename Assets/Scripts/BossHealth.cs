@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class BossHealth : MonoBehaviour
 {
@@ -31,11 +32,20 @@ public class BossHealth : MonoBehaviour
         }
         if (collision.CompareTag("Lazer")) //laser damage 
         {
-            for(int i = 0; i < 50; i++)
-            {
-                BDamage();
-            }
-            
+            StartCoroutine(LazerAttack());
+        }
+    }
+
+    private IEnumerator LazerAttack()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            BDamage();
+            BDamage();
+            BDamage();
+            BDamage();
+            BDamage();
+            yield return new WaitForSeconds(0.1f); // Fixed the typo here
         }
     }
 

@@ -1,35 +1,52 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
 
 public class RobotEyes : MonoBehaviour
 {
-   private float _nextShot = 0.15f;
-	[SerializeField] 
-	private float _fireDelay = 0.5f;
-	public GameObject Lazer;
-	public Transform firePoint;
-	
+    private float _nextShot = 0.15f;
+    [SerializeField] private float _fireDelay = 0.5f;
+    public GameObject Lazer;
+    public Transform firePoint;
+    public float charge;
+    public float chargemax;
+    [SerializeField] private EyeCharge _EyeCharge;
 
- // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(FireLazer());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator FireLazer()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time > _nextShot)
-		{
-			print("FORED");
-			GameObject clone = Instantiate(Lazer, firePoint.position, firePoint.rotation);
-			_nextShot = Time.time + _fireDelay;
-			Destroy(clone, 2f);
-		}
-		
+        if (!(charge < chargemax))
+        {
+            print("FORED");
+            GameObject clone = Instantiate(Lazer, firePoint.position, firePoint.rotation);
 
+			charge = 0f;
+			_EyeCharge.UpdateChargeBar(charge, chargemax);
+			CalculateNextShotTime();
+			
+            yield return new WaitForSeconds(2f); // Wait for 2 seconds after bullet is destroyed
+            Destroy(clone);
+        }
+    }
+
+    private void CalculateNextShotTime()
+    {
+        StartCoroutine(ChargeAndShow());
+    }
+
+    private IEnumerator ChargeAndShow()
+    {
+        while (charge < chargemax)
+        {
+            charge += 0.1f;
+            _EyeCharge.UpdateChargeBar(charge, chargemax);
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

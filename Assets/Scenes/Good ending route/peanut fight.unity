@@ -3987,6 +3987,7 @@ MonoBehaviour:
   _B5Attack4_2: {fileID: 1764905523}
   _B5Attack5: {fileID: 1177832426}
   _B5Attack5_2: {fileID: 1946200309}
+  _B3Attack3: {fileID: 1629982233}
 --- !u!50 &1222017691
 Rigidbody2D:
   serializedVersion: 4
@@ -4980,6 +4981,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619769475}
   m_CullTransparentMesh: 1
+--- !u!1 &1629982232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629982234}
+  - component: {fileID: 1629982233}
+  m_Layer: 0
+  m_Name: Attack6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1629982233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629982232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f66565c7c00704a824aecfad412457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7075204057971356226, guid: 1311b35ed9afab54e858d0dff517726a, type: 3}
+  totalBullets: 5
+  bulletSpeed: 50
+  minfallDuration: 2
+  maxfallDuration: 3.5
+  minSpawnInterval: 0.1
+  maxSpawnInterval: 0.5
+  minXPosition: -40
+  maxXPosition: 40
+--- !u!4 &1629982234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629982232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -62.9, y: 170, z: 9.489057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1671990526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,3 +6788,4 @@ SceneRoots:
   - {fileID: 1764905522}
   - {fileID: 1177832431}
   - {fileID: 1946200315}
+  - {fileID: 1629982234}
