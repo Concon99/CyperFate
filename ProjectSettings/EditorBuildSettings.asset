@@ -75,6 +75,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Good ending route/peanut fight.unity
     guid: 91c933bd84c8c3d4bbe274c588adf898
   - enabled: 1
-    path: Assets/Scenes/Bad ending route/Level 2 - good ending.unity
+    path: Assets/Scenes/Bad ending route/Level 2 - bad ending.unity
     guid: fdc993e19611f204dbd71f246daae5c2
   m_configObjects: {}

@@ -574,6 +574,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &245610489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 245610491}
+  - component: {fileID: 245610490}
+  m_Layer: 0
+  m_Name: HeartSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &245610490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245610489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c290f131390204f96df060a66d672d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeartPreFab: {fileID: 619923680218550292, guid: 92a32b6d73df6834cb5465b637cf44d5, type: 3}
+  minX: -28
+  maxX: 42
+  minY: -47
+  maxY: 22
+--- !u!4 &245610491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245610489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.1, y: 22.8, z: 0.0012234394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &297448084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1795,7 @@ MonoBehaviour:
   rb: {fileID: 831951787}
   speed: 15
   weapon: {fileID: 1439523888}
+  _healthController: {fileID: 182843695}
 --- !u!50 &831951787
 Rigidbody2D:
   serializedVersion: 4
@@ -4200,3 +4250,4 @@ SceneRoots:
   - {fileID: 1652683482}
   - {fileID: 717757171}
   - {fileID: 512609851}
+  - {fileID: 245610491}

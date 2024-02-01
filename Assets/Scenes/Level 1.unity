@@ -1116,6 +1116,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &722767725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722767727}
+  - component: {fileID: 722767726}
+  m_Layer: 0
+  m_Name: HeartSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &722767726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722767725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c290f131390204f96df060a66d672d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeartPreFab: {fileID: 619923680218550292, guid: 92a32b6d73df6834cb5465b637cf44d5, type: 3}
+  minX: -20
+  maxX: 20
+  minY: -20
+  maxY: 20
+--- !u!4 &722767727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722767725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.969187, y: 7.6699443, z: 0.0012234394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &831951783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1270,7 @@ MonoBehaviour:
   rb: {fileID: 831951787}
   speed: 15
   weapon: {fileID: 1439523888}
+  _healthController: {fileID: 1096658464}
 --- !u!50 &831951787
 Rigidbody2D:
   serializedVersion: 4
@@ -1310,7 +1360,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0007518381, y: -0.023306727}
@@ -3504,3 +3554,4 @@ SceneRoots:
   - {fileID: 1568226649}
   - {fileID: 3672887670942416011}
   - {fileID: 2123736619}
+  - {fileID: 722767727}

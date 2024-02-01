@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     public Weapon weapon;
+    [SerializeField] private HealthController _healthController;
 
     Vector2 moveDir;
     Vector2 mousePos;
@@ -58,4 +59,17 @@ public class PlayerMovement : MonoBehaviour
        
         rb.rotation = aimAngle;
     }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Heart"))
+        {
+            if (_healthController.PlayerHealth < 5);
+            _healthController.PlayerHealth += 1;
+            _healthController.UpdateHealth();
+        }
+    }
 }
+

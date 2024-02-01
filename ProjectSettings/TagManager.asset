@@ -8,6 +8,7 @@ TagManager:
   - Lazer
   - arm
   - Portal
+  - Heart
   layers:
   - Default
   - TransparentFX
