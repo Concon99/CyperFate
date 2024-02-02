@@ -2012,6 +2012,7 @@ MonoBehaviour:
   rb: {fileID: 648785815}
   speed: 15
   weapon: {fileID: 1044262206}
+  _healthController: {fileID: 0}
 --- !u!212 &648785817
 SpriteRenderer:
   m_ObjectHideFlags: 0
