@@ -1049,6 +1049,7 @@ GameObject:
   - component: {fileID: 648785813}
   - component: {fileID: 648785812}
   - component: {fileID: 648785819}
+  - component: {fileID: 648785820}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -1176,6 +1177,7 @@ MonoBehaviour:
   rb: {fileID: 648785815}
   speed: 15
   weapon: {fileID: 1044262206}
+  _healthController: {fileID: 0}
 --- !u!212 &648785817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1262,6 +1264,22 @@ MonoBehaviour:
   charge: 0
   chargemax: 0
   _EyeCharge: {fileID: 0}
+--- !u!114 &648785820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648785811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8df6c4b66a7884a870c0735921dd9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 75
+  playerMovement: {fileID: 648785816}
+  dashLength: 0.1
+  dashCooldown: 1
 --- !u!1 &712093478
 GameObject:
   m_ObjectHideFlags: 0

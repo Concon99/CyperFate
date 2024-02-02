@@ -30,7 +30,7 @@ public class RobotEyes : MonoBehaviour
 			_EyeCharge.UpdateChargeBar(charge, chargemax);
 			CalculateNextShotTime();
 			
-            yield return new WaitForSeconds(2f); // Wait for 2 seconds after bullet is destroyed
+            yield return new WaitForSeconds(2f); 
             Destroy(clone);
         }
     }

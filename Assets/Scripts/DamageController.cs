@@ -1,9 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageController : MonoBehaviour
 {
     [SerializeField] private int EnemyDamage; // Creating damage variable
+
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject); // Persist the GameObject between scenes
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +25,7 @@ public class DamageController : MonoBehaviour
 
         healthController.UpdateHealth();
 
-        yield return new WaitForSeconds(1.0f); // Adjust the delay time as needed
+        // You don't need to wait for a second, just update the index.
+        yield return null;
     }
 }

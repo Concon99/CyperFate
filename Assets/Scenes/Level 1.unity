@@ -3373,7 +3373,7 @@ MonoBehaviour:
   _BossHealth: {fileID: 1824222504}
   WaitTime: 5
   TimeBeforeAttacks: 2
-  sceneBuildIntext: 5
+  sceneBuildIndex: 5
 --- !u!1 &2124863490
 GameObject:
   m_ObjectHideFlags: 3

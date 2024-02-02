@@ -1,52 +1,57 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-	private float activeMoveSpeed;
-	public float dashSpeed;
-	public PlayerMovement playerMovement;
+    private float activeMoveSpeed;
+    public float dashSpeed;
+    public PlayerMovement playerMovement;
 
-	public float dashLength = 0.5f, dashCooldown = 1f;
+    public float dashLength = 0.5f, dashCooldown = 1f;
 
-	private float dashCounter;
+    private float dashCounter;
+    private bool isDashing;
 
-	private float dashCoolCounter;
+    // Start is called before the first frame update
+    void Start()
+    {
+        activeMoveSpeed = playerMovement.speed;
+    }
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		activeMoveSpeed = playerMovement.speed;
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
+        {
+            StartCoroutine(DashRoutine());
+        }
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetKey(KeyCode.LeftShift))
-		{
-			print("dashed");
-			if (dashCoolCounter <= 0 && dashCounter <= 0)
-			{
-				playerMovement.speed = dashSpeed;
-				dashCounter = dashLength;
-			}
-		}
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
 
-		if (dashCounter > 0)
-		{
-			dashCounter -= Time.deltaTime;
+            if (dashCounter <= 0)
+            {
+                playerMovement.speed = activeMoveSpeed;
+                isDashing = false;
+            }
+        }
+    }
 
-			if (dashCounter <= 0)
-			{
-				playerMovement.speed = activeMoveSpeed;
-				dashCoolCounter = dashCooldown;
+    IEnumerator DashRoutine()
+    {
+        isDashing = true;
 
-				if (dashCoolCounter > 0)
-				{
-					dashCoolCounter -= Time.deltaTime;
-				}
-			}
-		}
-	}
+        playerMovement.speed = dashSpeed;
+        dashCounter = dashLength;
+
+        // Wait for the dash to finish
+        yield return new WaitForSeconds(dashLength);
+
+        // Apply cooldown after each dash
+        yield return new WaitForSeconds(dashCooldown);
+
+        playerMovement.speed = activeMoveSpeed;
+        isDashing = false;
+    }
 }

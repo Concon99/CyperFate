@@ -2001,6 +2001,7 @@ MonoBehaviour:
   rb: {fileID: 1304859554}
   speed: 10
   weapon: {fileID: 1345153261}
+  _healthController: {fileID: 0}
 --- !u!212 &1304859556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2084,6 +2085,9 @@ MonoBehaviour:
   _fireDelay: 5
   Lazer: {fileID: 1100626391}
   firePoint: {fileID: 181427193}
+  charge: 0
+  chargemax: 0
+  _EyeCharge: {fileID: 0}
 --- !u!114 &1304859559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,10 +2100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8df6c4b66a7884a870c0735921dd9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 10
+  dashSpeed: 75
   playerMovement: {fileID: 1304859555}
-  dashLength: 0.5
-  dashCooldown: 1
+  dashLength: 0.1
+  dashCooldown: 0
 --- !u!1 &1310237644
 GameObject:
   m_ObjectHideFlags: 0
