@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5411976635636375557}
   - component: {fileID: 5804111136162789108}
   - component: {fileID: 9180029386056687327}
-  - component: {fileID: 1572478705026965573}
+  - component: {fileID: -963484358391729897}
   m_Layer: 0
   m_Name: lighting
   m_TagString: Untagged
@@ -164,7 +164,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1572478705026965573
+--- !u!114 &-963484358391729897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7871226687996098561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e083b0f6b46585f4ba67f5e495e03ee0, type: 3}
+  m_Script: {fileID: 11500000, guid: 79f834c8a2bcce24387b945cb0292d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 1

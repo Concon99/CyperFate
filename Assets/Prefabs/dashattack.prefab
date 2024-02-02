@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8868870658870889101}
   - component: {fileID: -2335132940542055944}
   - component: {fileID: 5896796479223788580}
-  - component: {fileID: 4917131565989248613}
+  - component: {fileID: -1060356531321320739}
   m_Layer: 0
   m_Name: dashattack
   m_TagString: Untagged
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4917131565989248613
+--- !u!114 &-1060356531321320739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

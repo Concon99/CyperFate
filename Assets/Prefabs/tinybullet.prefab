@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6438725654245541147}
   - component: {fileID: -2030031645535278766}
   - component: {fileID: 2903727321495740821}
-  - component: {fileID: 3590689591803542455}
+  - component: {fileID: -6579317071556362358}
   m_Layer: 0
   m_Name: tinybullet
   m_TagString: Untagged
@@ -176,7 +176,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3590689591803542455
+--- !u!114 &-6579317071556362358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5553785454178360827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e083b0f6b46585f4ba67f5e495e03ee0, type: 3}
+  m_Script: {fileID: 11500000, guid: 79f834c8a2bcce24387b945cb0292d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 1
