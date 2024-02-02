@@ -23,12 +23,12 @@ public class Dash : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.LeftShift))
+		if (Input.GetKey(KeyCode.LeftShift))
 		{
 			print("dashed");
 			if (dashCoolCounter <= 0 && dashCounter <= 0)
 			{
-				activeMoveSpeed = dashSpeed;
+				playerMovement.speed = dashSpeed;
 				dashCounter = dashLength;
 			}
 		}
@@ -39,7 +39,7 @@ public class Dash : MonoBehaviour
 
 			if (dashCounter <= 0)
 			{
-				activeMoveSpeed = playerMovement.speed;
+				playerMovement.speed = activeMoveSpeed;
 				dashCoolCounter = dashCooldown;
 
 				if (dashCoolCounter > 0)

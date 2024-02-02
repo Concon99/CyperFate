@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveDir.x * speed, moveDir.y * speed);
+        Debug.Log(speed);
 
         Vector2 aimDir = mousePos - rb.position;
         float aimAngle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg - 90f;
