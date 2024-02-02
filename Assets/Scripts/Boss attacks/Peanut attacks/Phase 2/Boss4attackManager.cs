@@ -91,4 +91,14 @@ public class Boss4attackManager : MonoBehaviour
         SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single);
         print("ContinuousAttacks ended");
     }
+
+    void Update()
+    {
+    
+        if (_BossHealth.BHealth < 0f)
+        {
+            Debug.Log("Switching scenes");
+            SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single);
+        }
+    }
 }

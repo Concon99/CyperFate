@@ -13,14 +13,17 @@ public class B1Attack1 : MonoBehaviour
     public float maxYPosition = 2f;
     private int bulletsSpawned = 0;
 
+    public AudioSource BulletSound;
+
     void Start()
     {
         // Set up repeating invocation in Start
-        InvokeRepeating("SpawnBullet", 0f, Random.Range(minSpawnInterval, maxSpawnInterval));
+
     }
 
     public void Attack1()
     {
+        InvokeRepeating("SpawnBullet", 0f, Random.Range(minSpawnInterval, maxSpawnInterval));
         // Reset bulletsSpawned when needed
         bulletsSpawned = 0;
     }
@@ -29,6 +32,7 @@ public class B1Attack1 : MonoBehaviour
     {
         if (bulletsSpawned < totalBullets)
         {
+            BulletSound.Play();
             float randomYPosition = Random.Range(minYPosition, maxYPosition);
             Vector3 spawnPosition = new Vector3(transform.position.x, randomYPosition, transform.position.z);
 

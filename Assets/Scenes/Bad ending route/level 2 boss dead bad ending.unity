@@ -2464,7 +2464,7 @@ MonoBehaviour:
     - character:
         name: player
         icon: {fileID: 21300000, guid: ac3516fb59e0e8c45b36f456ea8f68df, type: 3}
-      line: Robotic legs - Gives the ability to dash with X or Right Click. In exchange
+      line: Robotic legs - Gives the ability to dash with X or Shift. In exchange
         you will lose humanity.
   Hastriggered: 0
 --- !u!61 &1691312723

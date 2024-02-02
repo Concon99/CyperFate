@@ -11,6 +11,8 @@ public class B1Attack3 : MonoBehaviour
     private int bulletsSpawned = 0;
     private Coroutine attackCoroutine; // Store the reference to the coroutine
 
+    public AudioSource BulletSound;
+
     void Start()
     {
     }
@@ -43,6 +45,7 @@ public class B1Attack3 : MonoBehaviour
 
     void SpawnBullet()
     {
+        BulletSound.Play();
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 5f, transform.position.z);
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
 

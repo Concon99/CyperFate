@@ -6,6 +6,9 @@ public class B4Attack4 : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
 
+    public AudioSource Static;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +26,9 @@ public class B4Attack4 : MonoBehaviour
         canvasGroup.alpha = 0.6f;
         
 
-        float waitTime = Random.Range(3,7);
         // Wait for 3 seconds
-        yield return new WaitForSeconds(waitTime);
+        Static.Play();
+        yield return new WaitForSeconds(8);
 
         // Make the UI invisible again
         canvasGroup.alpha = 0f;

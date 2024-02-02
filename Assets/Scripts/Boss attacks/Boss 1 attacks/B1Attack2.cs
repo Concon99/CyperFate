@@ -14,6 +14,8 @@ public class B1Attack2 : MonoBehaviour
     private int bulletsSpawned = 0;
     private Coroutine attackCoroutine; // Store the reference to the coroutine
 
+    public AudioSource BulletSound;
+
     void Start()
     {
     }
@@ -47,6 +49,7 @@ public class B1Attack2 : MonoBehaviour
 
     void SpawnBullet()
     {
+        BulletSound.Play();
         float randomYPosition = Random.Range(minYPosition, maxYPosition);
         Vector3 spawnPosition = new Vector3(transform.position.x, randomYPosition, transform.position.z);
 

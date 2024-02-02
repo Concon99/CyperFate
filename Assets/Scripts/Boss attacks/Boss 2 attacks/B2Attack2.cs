@@ -7,6 +7,7 @@ public class B2Attack2 : MonoBehaviour
     public Animator transation;
 
 
+
     public void Attack2()
     {
             transation.SetBool("Speedup", true);
@@ -16,7 +17,6 @@ public class B2Attack2 : MonoBehaviour
 
     private IEnumerator WaitForAnimationCooldown()
     {
-
         // Wait for 0.5 seconds
         yield return new WaitForSeconds(1f);
         transation.SetBool("Speedup", false);

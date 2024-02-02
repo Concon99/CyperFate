@@ -20,6 +20,9 @@ public class AttackManager : MonoBehaviour
     [SerializeField] private B4Attack4 _B4Attack4;
     [SerializeField] private HealthController _HealthController;
 
+    // New event to signal Phase 2
+    public delegate void Phase2Event();
+    public static event Phase2Event OnPhase2;
 
     // Start is called before the first frame update
     void Start()
@@ -64,8 +67,7 @@ public class AttackManager : MonoBehaviour
             transform.position = spawner3.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -180f);
             yield return new WaitForSeconds(0.3f);
-            canvasGroup.alpha = 0f;            
-            
+            canvasGroup.alpha = 0f;
 
             while (!Attacking)
             {
@@ -78,7 +80,7 @@ public class AttackManager : MonoBehaviour
 
             transform.position = spawner4.position;
             transform.rotation = Quaternion.Euler(0f, 0f, -270f);
-            
+
             while (!Attacking)
             {
                 Debug.Log("waiting...");
@@ -87,61 +89,61 @@ public class AttackManager : MonoBehaviour
 
             yield return new WaitForSeconds(1.5f);
         }
-
     }
 
     private IEnumerator FightStart()
     {
         while (_PeanutBoss.BHealth > 0)
         {
-            int WaitTime = Random.Range(3,8);
+            int WaitTime = Random.Range(3, 8);
             yield return new WaitForSeconds(WaitTime);
 
-                int randomAttack = Random.Range(1, 5);
-                
-                if (randomAttack == 1)
-                {
-                    Debug.Log("Attack 1");
-                    Attacking = true;
-                    _B4Attack1.Attack1();
-                    _B4Attack1_2.Attack1();
-                    yield return new WaitForSeconds(5);
-                    Attacking = false;
-                    
-                }
+            int randomAttack = Random.Range(1, 5);
 
-                if (randomAttack == 2)
-                {
-                    Debug.Log("Attack 2");
-                    Attacking = true;
-                    _B4Attack2.Attack2();
-                    _B4Attack2_4.Attack2();
-                    yield return new WaitForSeconds(10);
-                    Attacking = false;
-                }
+            if (randomAttack == 1)
+            {
+                Debug.Log("Attack 1");
+                Attacking = true;
+                _B4Attack1.Attack1();
+                _B4Attack1_2.Attack1();
+                yield return new WaitForSeconds(5);
+                Attacking = false;
+            }
+            else if (randomAttack == 2)
+            {
+                Debug.Log("Attack 2");
+                Attacking = true;
+                _B4Attack2.Attack2();
+                _B4Attack2_4.Attack2();
+                yield return new WaitForSeconds(10);
+                Attacking = false;
+            }
+            else if (randomAttack == 3)
+            {
+                Debug.Log("Attack 3");
+                Attacking = true;
+                _B4Attack3.Attack3();
+                yield return new WaitForSeconds(5);
+                Attacking = false;
+            }
+            else if (randomAttack == 4)
+            {
+                Debug.Log("Attack 4");
+                Attacking = true;
+                _B4Attack4.Attack4();
+                yield return new WaitForSeconds(3f);
+                Attacking = false;
+            }
 
-                if (randomAttack == 3)
-                {
-                    Debug.Log("Attack 3");
-                    Attacking = true;
-                    _B4Attack3.Attack3();
-                    yield return new WaitForSeconds(5);
-                    Attacking = false;
-                }
-
-                if (randomAttack == 4)
-                {
-                    Debug.Log("Attack 4");
-                    Attacking = true;
-                    _B4Attack4.Attack4();
-                    yield return new WaitForSeconds(3f);
-                    Attacking = false;
-                }
-
-                yield return null;
+            yield return null;
         }
 
-            yield return null;  // Adjust the yield statement as needed
-    }
+        // Boss health is below zero, signal Phase 2
+        if (_PeanutBoss.BHealth <= 0)
+        {
+            OnPhase2?.Invoke();
+        }
 
+        yield return null;  // Adjust the yield statement as needed
+    }
 }
