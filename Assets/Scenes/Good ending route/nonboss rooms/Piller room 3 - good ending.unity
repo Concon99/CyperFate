@@ -2737,9 +2737,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1618844683}
-  - component: {fileID: 1618844682}
   - component: {fileID: 1618844681}
-  - component: {fileID: 1618844680}
+  - component: {fileID: 1618844684}
   m_Layer: 0
   m_Name: Dialouge trigger area
   m_TagString: Untagged
@@ -2747,41 +2746,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1618844680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618844679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebacf5d06773d82458cc75febe8c2aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines:
-    - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: alright genuinely whats your problem?
-    - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
-      line: You are here to become a weapon. You aren't allowed to misbehave.
-    - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: I'm SICK OF THIS
-    - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: Enter the next room and I will terminate you.
-    - character:
-        name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
-      line: Choose Wisely.
-  Hastriggered: 1
 --- !u!61 &1618844681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2827,21 +2791,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 62.675827, y: 28.527994}
   m_EdgeRadius: 0
---- !u!114 &1618844682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618844679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebacf5d06773d82458cc75febe8c2aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines: []
-  Hastriggered: 0
 --- !u!4 &1618844683
 Transform:
   m_ObjectHideFlags: 0
@@ -2857,6 +2806,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618844684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618844679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebacf5d06773d82458cc75febe8c2aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: "\rAlright genuinely what's your problem?"
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
+      line: You are here to become a weapon. You aren't allowed to misbehave.
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
+      line: I'm SICK OF THIS
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+      line: Enter the next room and I will terminate you.
+    - character:
+        name: Peanut
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
+      line: Choose Wisely.
+  Hastriggered: 0
 --- !u!1 &1643695403
 GameObject:
   m_ObjectHideFlags: 0

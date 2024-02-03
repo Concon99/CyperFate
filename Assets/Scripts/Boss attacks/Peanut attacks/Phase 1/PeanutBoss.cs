@@ -50,7 +50,7 @@ public class PeanutBoss : MonoBehaviour
         // Assuming healthbar has a method like UpdateHealthBar that takes parameters
         healthbar.UpdateHealthBar(bHealth, bHealthMax);
 
-        if (bHealth <= 0)
+        if (bHealth <= 150)
         {
             Debug.Log("End");
 
@@ -58,20 +58,17 @@ public class PeanutBoss : MonoBehaviour
             canvasGroup.alpha = 1f;
             yield return new WaitForSeconds(2);
 
-            while (canvasGroup.alpha > 0)
-            {
-                canvasGroup.alpha += 0.1f;
-                yield return new WaitForSeconds(0.2f);
-            }
+
+            canvasGroup.alpha = 0f;
             _HealthController.PlayerHealth = 5;
             _Boss4attackManager.Phase2();
             healthbar.UpdateHealthBar(bHealth, bHealthMax);
+            canvasGroup.alpha = 0f;
             Destroy(gameObject);
         }
     }
 
     public void Phase2()
     {
-        // Implement phase 2 logic here if needed
     }
 }

@@ -34,7 +34,7 @@ public class AttackManager : MonoBehaviour
 
     IEnumerator Movement()
     {
-        while (_PeanutBoss.BHealth > 0)
+        while (_PeanutBoss.BHealth > 150)
         {
             canvasGroup.alpha = .3f;
             transform.position = spawner1.position;
@@ -93,7 +93,7 @@ public class AttackManager : MonoBehaviour
 
     private IEnumerator FightStart()
     {
-        while (_PeanutBoss.BHealth > 0)
+        while (_PeanutBoss.BHealth > 150)
         {
             int WaitTime = Random.Range(3, 8);
             yield return new WaitForSeconds(WaitTime);
@@ -139,7 +139,7 @@ public class AttackManager : MonoBehaviour
         }
 
         // Boss health is below zero, signal Phase 2
-        if (_PeanutBoss.BHealth <= 0)
+        if (_PeanutBoss.BHealth <= 150)
         {
             OnPhase2?.Invoke();
         }

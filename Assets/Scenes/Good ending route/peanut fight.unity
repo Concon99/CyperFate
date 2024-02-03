@@ -869,6 +869,7 @@ MonoBehaviour:
   maxSpawnInterval: 0.5
   minYPosition: -25
   maxYPosition: 115
+  BulletSound: {fileID: 0}
 --- !u!4 &409215066
 Transform:
   m_ObjectHideFlags: 0
@@ -2558,6 +2559,7 @@ MonoBehaviour:
   bulletSpeed: 50
   bulletLife: 5
   spawnInterval: 0.2
+  BulletSound: {fileID: 0}
 --- !u!4 &924730731
 Transform:
   m_ObjectHideFlags: 0
@@ -3506,6 +3508,7 @@ MonoBehaviour:
   maxSpawnInterval: 0.5
   minYPosition: -25
   maxYPosition: 115
+  BulletSound: {fileID: 0}
 --- !u!4 &1148130805
 Transform:
   m_ObjectHideFlags: 0
@@ -3902,7 +3905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 1
-  bHealth: 300
+  bHealth: 150
   bHealthMax: 300
   healthbar: {fileID: 2079090658}
 --- !u!61 &1222017687
@@ -3980,6 +3983,8 @@ MonoBehaviour:
   TimeBeforeAttacks: 1
   sceneBuildIntext: 22
   objectRenderer: {fileID: 1222017684}
+  bHealth: 150
+  bHealthMax: 300
   _B1Attack1: {fileID: 1148130804}
   _B1Attack2: {fileID: 409215065}
   _B1Attack3: {fileID: 924730730}
@@ -3989,6 +3994,7 @@ MonoBehaviour:
   _B5Attack5: {fileID: 1177832426}
   _B5Attack5_2: {fileID: 1946200309}
   _B3Attack3: {fileID: 1629982233}
+  healthbar: {fileID: 2079090658}
 --- !u!50 &1222017691
 Rigidbody2D:
   serializedVersion: 4
@@ -4724,8 +4730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDamage: 1
-  bHealth: 200
-  bHealthMax: 200
+  bHealth: 300
+  bHealthMax: 300
   healthbar: {fileID: 2079090658}
   _HealthController: {fileID: 1008345600}
   _Boss4attackManager: {fileID: 1222017690}
@@ -6033,6 +6039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1936017559}
+  Static: {fileID: 0}
 --- !u!95 &1936017558
 Animator:
   serializedVersion: 5

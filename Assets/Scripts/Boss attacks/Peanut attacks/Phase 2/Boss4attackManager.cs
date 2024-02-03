@@ -10,7 +10,8 @@ public class Boss4attackManager : MonoBehaviour
     public float TimeBeforeAttacks;
     public int sceneBuildIntext;
     public Renderer objectRenderer;
-
+    [SerializeField] private int bHealth = 100;
+    [SerializeField] private int bHealthMax = 100;
     [SerializeField] private B1Attack1 _B1Attack1;
     [SerializeField] private B1Attack2 _B1Attack2;
     [SerializeField] private B1Attack3 _B1Attack3;
@@ -21,16 +22,20 @@ public class Boss4attackManager : MonoBehaviour
     [SerializeField] private B5Attack5_2 _B5Attack5_2;
     [SerializeField] private B3Attack3 _B3Attack3;
 
+    [SerializeField] private BossHealthVisual healthbar;
+
+
+
     private void Start()
     {
+        healthbar = GetComponentInChildren<BossHealthVisual>();
         // Ensure the renderer is initially visible
         objectRenderer.enabled = false;
     }
 
     public void Phase2()
     {
-        
-        _BossHealth.BHealth = 350;
+        healthbar.UpdateHealthBar(bHealth, bHealthMax);
         StartCoroutine(ContinuousAttacks());
     }
 
@@ -38,6 +43,7 @@ public class Boss4attackManager : MonoBehaviour
     {
         objectRenderer.enabled = true;
         print("ContinuousAttacks started");
+        healthbar.UpdateHealthBar(bHealth, bHealthMax);
         yield return new WaitForSeconds(TimeBeforeAttacks);
 
         while (_BossHealth.BHealth > 0f)
