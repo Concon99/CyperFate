@@ -57,6 +57,7 @@ public class HealthController : MonoBehaviour
 
         if (PlayerHealth == 0)
         {
+            GameOverSystemManager.lastScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene("GameOver");
         }
     }

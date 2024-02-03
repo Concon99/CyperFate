@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 3
+  sceneBuildIntext: 9
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
@@ -2066,7 +2066,7 @@ GameObject:
   - component: {fileID: 1047909592}
   - component: {fileID: 1047909591}
   - component: {fileID: 1047909590}
-  - component: {fileID: 1047909589}
+  - component: {fileID: 1047909594}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -2074,22 +2074,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1047909589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1047909588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ebdc8e6e93f2d47881202589357867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerDamage: 1
-  bHealth: 100
-  bHealthMax: 100
-  healthbar: {fileID: 0}
 --- !u!50 &1047909590
 Rigidbody2D:
   serializedVersion: 4
@@ -2229,6 +2213,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047909594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047909588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDamage: 1
+  bHealth: 100
+  bHealthMax: 100
 --- !u!1 &1277208402
 GameObject:
   m_ObjectHideFlags: 0

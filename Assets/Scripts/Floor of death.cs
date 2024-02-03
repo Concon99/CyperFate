@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FloorOfDeath : MonoBehaviour
 {
@@ -15,22 +16,14 @@ public class FloorOfDeath : MonoBehaviour
     public Sprite Icon3;
     public Sprite Icon4;
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private Image _image;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if (spriteRenderer == null)
-        {
-            Debug.LogError("SpriteRenderer component not found on the GameObject.");
-            return;
-        }
+        Debug.Log(GameOverSystemManager.lastScene);
 
-        // Retrieve the previous scene index from PlayerPrefs
-        int previousSceneIndex = PlayerPrefs.GetInt("PreviousSceneIndex", 0);
-
-        DisplayPreviousSceneInfo(previousSceneIndex);
+        DisplayPreviousSceneInfo(GameOverSystemManager.lastScene);
     }
 
     private void DisplayPreviousSceneInfo(int previousSceneIndex)
@@ -40,22 +33,22 @@ public class FloorOfDeath : MonoBehaviour
         if (set1BuildIndices.Contains(previousSceneIndex))
         {
             Debug.Log("Previous scene is in set 1.");
-            spriteRenderer.sprite = Icon1;
+            _image.sprite = Icon1;
         }
         else if (set2BuildIndices.Contains(previousSceneIndex))
         {
             Debug.Log("Previous scene is in set 2.");
-            spriteRenderer.sprite = Icon2;
+            _image.sprite = Icon2;
         }
         else if (set3BuildIndices.Contains(previousSceneIndex))
         {
             Debug.Log("Previous scene is in set 3.");
-            spriteRenderer.sprite = Icon3;
+            _image.sprite = Icon3;
         }
         else if (set4BuildIndices.Contains(previousSceneIndex))
         {
             Debug.Log("Previous scene is in set 4.");
-            spriteRenderer.sprite = Icon4;
+            _image.sprite = Icon4;
         }
     }
 }

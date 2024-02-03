@@ -62,8 +62,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Good ending route/level 3 boss dead good ending.unity
     guid: 7c65b2b8697464c49a06a168fa882b6f
   - enabled: 1
-    path: Assets/Scenes/Bad ending route/nonboss rooms/Piller room 3 - good ending
-      3.unity
+    path: Assets/Scenes/Bad ending route/nonboss rooms/Piller room 3 -bad ending.unity
     guid: 7fe57a55ef794ed439737495c289795a
   - enabled: 1
     path: Assets/Scenes/Good ending route/nonboss rooms/Piller room 3 - good ending.unity
