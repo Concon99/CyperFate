@@ -11,6 +11,9 @@ public class B2Attack1_2 : MonoBehaviour
     private Vector2 moveDirection;
     private Transform spawner;
 
+    public AudioSource DropSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +52,7 @@ public class B2Attack1_2 : MonoBehaviour
 
     IEnumerator MoveForwardAfterRotation()
     {
+        DropSound.Play();
         Debug.Log("MoveForwardAfterRotation coroutine started");
         StartCoroutine(DestroyAfterLifetime());
         float elapsedTime = 0f;

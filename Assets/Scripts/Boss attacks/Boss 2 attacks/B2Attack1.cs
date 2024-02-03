@@ -9,6 +9,7 @@ public class B2Attack1 : MonoBehaviour
     private Transform playerTransform;
     private Vector2 moveDirection;
 
+
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;

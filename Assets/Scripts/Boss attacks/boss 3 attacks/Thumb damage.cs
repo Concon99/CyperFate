@@ -5,11 +5,13 @@ using UnityEngine;
 public class ThumbDamage : MonoBehaviour
 {
     [SerializeField] private int EnemyDamage; // Creating damage variable
+    public AudioSource DropSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+
             // Access the HealthController instance using the singleton pattern
             HealthController healthController = HealthController.Instance;
             

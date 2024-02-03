@@ -11,6 +11,7 @@ public class B3Attack1 : MonoBehaviour
 
     private int Bulletsleft; // Number of bullets left
 
+
     void Start()
     {
         Bulletsleft = initialBullets; // Initialize Bulletsleft

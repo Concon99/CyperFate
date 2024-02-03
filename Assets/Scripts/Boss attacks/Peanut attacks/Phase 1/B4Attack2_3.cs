@@ -9,9 +9,11 @@ public class B4Attack2_3 : MonoBehaviour
     private Transform playerTransform;
     private Vector2 moveDirection;
 
+    public AudioSource BulletSound;
     // Start is called before the first frame update
     void Start()
     {
+        BulletSound.Play();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         moveDirection = (playerTransform.position - transform.position).normalized;
         StartCoroutine(DestroyAfterLifetime());

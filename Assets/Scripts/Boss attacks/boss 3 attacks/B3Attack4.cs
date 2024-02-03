@@ -9,6 +9,8 @@ public class B3Attack4 : MonoBehaviour
     public float bulletLife = 3f;
     private int bulletsSpawned = 0;
 
+    public AudioSource Vortextsound;
+
     void Start()
     {
     }
@@ -28,6 +30,7 @@ public class B3Attack4 : MonoBehaviour
 
     void SpawnBullet()
     {
+        Vortextsound.Play();
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);

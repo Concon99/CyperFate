@@ -8,6 +8,8 @@ public class B4Attack3_3 : MonoBehaviour
     private Transform portalTransform;
     private Rigidbody2D bulletRigidbody;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
