@@ -14,7 +14,12 @@ public class DialogueManager : MonoBehaviour
     private Queue<DialogueLine> lines = new Queue<DialogueLine>();
     public bool isDialogueActive = false;
     public float typingSpeed = 0.2f;
+
     public Animator animator;
+    public Animator _vanish;
+
+
+
     public bool Robotic_item = false;
 
     private void Start()
@@ -76,6 +81,8 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         animator.Play("hide");
+        _vanish.SetBool("Vanish",true);
+        Debug.Log("Dialouge over");
 
     }
 

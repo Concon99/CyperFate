@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
+    public AudioSource Collect;
+
     private void Start()
     {
+
         StartCoroutine(Creation());
     }
 
@@ -30,6 +33,8 @@ public class Heart : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Collect.Play();
+            Debug.Log("Collected Heart");
             Destroy(gameObject);
         }
     }

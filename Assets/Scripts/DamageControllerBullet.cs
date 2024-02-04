@@ -1,14 +1,19 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DamageControllerBullet : MonoBehaviour
 {
     [SerializeField] private int EnemyDamage; // Creating damage variable
+    private AudioSource Hurt;
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject); // Persist the GameObject between scenes
+        // Load the audio clip dynamically from the Resources folder
+        AudioClip hurtClip = Resources.Load<AudioClip>("HurtAudioClip");
+
+        // Create an AudioSource component dynamically
+        Hurt = gameObject.AddComponent<AudioSource>();
+        Hurt.clip = hurtClip;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +27,9 @@ public class DamageControllerBullet : MonoBehaviour
         HealthController healthController = HealthController.Instance;
 
         healthController.PlayerHealth -= EnemyDamage;
+
+        if (Hurt != null && Hurt.clip != null)
+            Hurt.Play();
 
         healthController.UpdateHealth();
 
