@@ -1118,9 +1118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 14
+  sceneBuildIntext: 23
   transation: {fileID: 1339319263}
-  transationTime: 0
+  transationTime: 1
   _DialogueManager: {fileID: 1346561779}
 --- !u!1 &571537291
 GameObject:
@@ -3090,6 +3090,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

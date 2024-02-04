@@ -76,4 +76,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Good ending route/_Goodending.unity
     guid: 13dea35b923ab964396616f481c2d020
+  - enabled: 1
+    path: Assets/Scenes/Good ending route/Peaunt dead.unity
+    guid: e3964fa70209f3f438e4bbf3ac93ba26
+  - enabled: 1
+    path: Assets/Scenes/Ending Cutscnes/Bad ending.unity
+    guid: be309333583f855498b16c0ecf51e1bf
   m_configObjects: {}

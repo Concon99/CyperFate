@@ -3981,7 +3981,7 @@ MonoBehaviour:
   _BossHealth: {fileID: 1222017686}
   WaitTime: 5
   TimeBeforeAttacks: 1
-  sceneBuildIntext: 22
+  sceneBuildIntext: 23
   objectRenderer: {fileID: 1222017684}
   bHealth: 150
   bHealthMax: 300
@@ -4490,6 +4490,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

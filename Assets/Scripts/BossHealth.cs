@@ -65,7 +65,6 @@ public class BossHealth : MonoBehaviour
 
         if (bHealth <= 0)
         {
-            Destroy(gameObject);
         }
     }
 
