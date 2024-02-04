@@ -1,19 +1,22 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
 
 public class Object : MonoBehaviour
 {
-    [SerializeField] private int PlayerDamage;
+    [SerializeField] private int playerDamage = 1; // Use camelCase for variable names
     [SerializeField] private int bHealth = 100;
     [SerializeField] private int bHealthMax = 100;
 
-    private void Awake() // Corrected method name
+    private Renderer objectRenderer;
+    private Color defaultColor;
+
+    private void Awake()
     {
-        // Assuming you have a Rigidbody2D component on the same GameObject
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        objectRenderer = GetComponent<Renderer>();
+        defaultColor = objectRenderer.material.color;
     }
 
-    public int BHealth // Property to access bHealth
+    public int BHealth
     {
         get { return bHealth; }
         set { bHealth = value; }
@@ -25,24 +28,42 @@ public class Object : MonoBehaviour
         {
             BDamage();
         }
-        if (collision.CompareTag("Lazer")) //laser damage 
+        if (collision.CompareTag("Lazer"))
         {
-            for(int i = 0; i < 50; i++)
-            {
-                BDamage();
-            }
-            
+            // Use a separate method for the laser damage to improve readability
+            ApplyLaserDamage();
         }
     }
 
     void BDamage()
     {
-        print("boss hit~!");
-        bHealth = bHealth - PlayerDamage;
+        StartCoroutine(EyeFrame());
+        print("Boss hit~!");
+        bHealth -= playerDamage; // Use -= for decrementing
 
         if (bHealth <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    void ApplyLaserDamage()
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            BDamage(); // Reuse the BDamage method for consistency
+        }
+    }
+
+    void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
+
+    IEnumerator EyeFrame()
+    {
+        ChangeColor(Color.red);
+        yield return new WaitForSeconds(0.1f);
+        ChangeColor(defaultColor);
     }
 }
