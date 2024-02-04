@@ -1055,7 +1055,7 @@ Transform:
   m_GameObject: {fileID: 547857663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8585855, y: -0.5502677, z: -0.1596828}
+  m_LocalPosition: {x: 1.8585855, y: -0.91, z: -0.1596828}
   m_LocalScale: {x: 3.2741604, y: 0.6714473, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneBuildIntext: 24
   transation: {fileID: 1339319263}
-  transationTime: 1
+  transationTime: 0
   _DialogueManager: {fileID: 1346561779}
 --- !u!1 &571537291
 GameObject:
