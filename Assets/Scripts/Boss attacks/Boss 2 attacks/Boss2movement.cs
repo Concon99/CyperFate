@@ -18,8 +18,11 @@ public class Boss2movement : MonoBehaviour
 
     public Vector2 TargetPosition = new Vector2(0f, 0f); // Specify the desired destination coordinates
 
+    public Animator _phases;
+
     void Start()
     {
+        _phases = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(MoveBossInBox());
     }
@@ -34,19 +37,23 @@ public class Boss2movement : MonoBehaviour
         while (_BossHealth.BHealth > 0f)
         {
             // Move right for a specified distance
+            _phases.SetInteger("phase", 1);
             rb.velocity = Vector2.right * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
 
 
             // Move down for a specified distance
+            _phases.SetInteger("phase", 2);
             rb.velocity = Vector2.down * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
 
             // Move left for a specified distance
+            _phases.SetInteger("phase", 3);
             rb.velocity = Vector2.left * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
 
             // Move up for a specified distance
+            _phases.SetInteger("phase", 4);
             rb.velocity = Vector2.up * EnemySpeed;
             yield return new WaitForSeconds(MoveDistance / Mathf.Abs(EnemySpeed));
         }

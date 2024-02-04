@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -46.572124, y: -18.295017, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 6c0edbb081ccda54d8b502d13c3551b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e799d85867b26c64499e361ad8daa07b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 1
+  DropSound: {fileID: 0}
 --- !u!114 &-4566774142873316444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  lifetime: 3
+  lifetime: 10
   alignDuration: 1
   moveForwardDuration: 2
   DropSound: {fileID: 4569669038995870420}

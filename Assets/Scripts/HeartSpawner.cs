@@ -20,7 +20,7 @@ public class HeartSpawner : MonoBehaviour
         while (true)
         {
         CreateHeart();
-        float WaitTime = Random.Range(10,20);
+        float WaitTime = Random.Range(10,25);
         yield return new WaitForSeconds(WaitTime);
         }
     }

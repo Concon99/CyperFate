@@ -15,9 +15,9 @@ public class B3Attack3 : MonoBehaviour
     private int bulletsSpawned = 0;
     private Coroutine attackCoroutine; // Keep track of the running coroutine
 
-
     void Start()
     {
+        // Empty implementation, consider removing
     }
 
     public void Attack3()
@@ -48,38 +48,34 @@ public class B3Attack3 : MonoBehaviour
 
     void SpawnBullet()
     {
-        float randomXPosition = Random.Range(minXPosition, maxXPosition);
-        Vector3 spawnPosition = new Vector3(randomXPosition, transform.position.y, transform.position.z);
+        if (bulletPrefab != null)
+        {
+            float randomXPosition = Random.Range(minXPosition, maxXPosition);
+            Vector3 spawnPosition = new Vector3(randomXPosition, transform.position.y, transform.position.z);
 
-        GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
-        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletsSpawned++;
-        bulletRb.velocity = Vector2.down * bulletSpeed;
+            GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            bulletsSpawned++;
+            bulletRb.velocity = Vector2.down * bulletSpeed;
 
-        StartCoroutine(WaitAndStopBullet(bulletRb));
+            StartCoroutine(WaitAndStopBullet(bullet)); // Pass the bullet to the coroutine
+        }
+        else
+        {
+            Debug.LogError("BulletPrefab is not assigned in B3Attack3 script.");
+        }
     }
 
-    private IEnumerator WaitAndStopBullet(Rigidbody2D bulletRb)
+    private IEnumerator WaitAndStopBullet(GameObject bullet)
     {
         float fallDuration = Random.Range(minfallDuration, maxfallDuration);
         yield return new WaitForSeconds(fallDuration); // Wait for the specified fall duration
 
+        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
         bulletRb.velocity = Vector2.zero; // Stop the bullet's movement
 
-        // Capture the bullet variable using a lambda expression
-        GameObject capturedBullet = bulletRb.gameObject;
+        yield return new WaitForSeconds(30); // Wait for 15 seconds before destroying the bullet
 
-        StartCoroutine(WaitToDestroy(capturedBullet)); // Pass the captured bullet GameObject
-
-        if (bulletsSpawned >= totalBullets)
-        {
-            StopCoroutine(attackCoroutine); // Stop spawning when totalBullets is reached
-        }
-    }
-
-    private IEnumerator WaitToDestroy(GameObject bullet)
-    {
-        yield return new WaitForSeconds(15);
         Destroy(bullet);
     }
 
