@@ -16,11 +16,11 @@ public class Transations : MonoBehaviour
         {
             if (_DialogueManager.Robotic_item)
             {
-             sceneBuildIntext = 12;
+             sceneBuildIntext = 13;
             }
             if (!_DialogueManager.Robotic_item)
             {
-             sceneBuildIntext = 13;
+             sceneBuildIntext = 14;
             }
             print("Trigger entered");
             transation.SetTrigger("Fadein"); // Causing the fade-in transition

@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 23
+  sceneBuildIntext: 24
   transation: {fileID: 1339319263}
   transationTime: 1
   _DialogueManager: {fileID: 1346561779}

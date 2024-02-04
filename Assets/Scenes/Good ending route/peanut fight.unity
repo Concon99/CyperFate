@@ -4159,7 +4159,7 @@ MonoBehaviour:
   _BossHealth: {fileID: 1222017694}
   WaitTime: 5
   TimeBeforeAttacks: 1
-  sceneBuildIntext: 22
+  sceneBuildIntext: 24
   objectRenderer: {fileID: 1222017684}
   bHealth: 150
   bHealthMax: 300

@@ -2631,7 +2631,7 @@ MonoBehaviour:
   _Boss2movement: {fileID: 1349108470}
   WaitTime: 3
   TimeBeforeAttacks: 0
-  sceneBuildIndex: 10
+  sceneBuildIndex: 11
 --- !u!4 &1246273862
 Transform:
   m_ObjectHideFlags: 0
@@ -2912,6 +2912,7 @@ MonoBehaviour:
   bulletLife: 5
   randomDelay: 0.1
   TargetPosition: {x: -15, y: 25}
+  _phases: {fileID: 0}
 --- !u!61 &1349108471
 BoxCollider2D:
   m_ObjectHideFlags: 0

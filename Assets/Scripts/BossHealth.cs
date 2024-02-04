@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class BossHealth : MonoBehaviour
@@ -65,6 +64,7 @@ public class BossHealth : MonoBehaviour
 
         if (bHealth <= 0)
         {
+            Destroy(gameObject); // Corrected the line to destroy the current GameObject
         }
     }
 

@@ -917,7 +917,7 @@ Transform:
   m_GameObject: {fileID: 547857663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93169475, y: -1.0775176, z: -0.1596828}
+  m_LocalPosition: {x: 1.04, y: -1.0775176, z: -0.1596828}
   m_LocalScale: {x: 3.6200821, y: 0.8451121, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 4
+  sceneBuildIntext: 5
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
@@ -2127,6 +2127,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

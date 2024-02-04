@@ -2472,7 +2472,7 @@ MonoBehaviour:
   _Boss2movement: {fileID: 2092368058}
   WaitTime: 3
   TimeBeforeAttacks: 0
-  sceneBuildIndex: 11
+  sceneBuildIndex: 12
 --- !u!4 &1246273862
 Transform:
   m_ObjectHideFlags: 0

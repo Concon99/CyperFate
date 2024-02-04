@@ -3279,13 +3279,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824222503}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3167, y: 20.4283, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.176151, y: 21.735312, z: -7.186604}
   m_LocalScale: {x: 11, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2019550621}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2123736619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1824222509
 PolygonCollider2D:
@@ -3685,7 +3685,8 @@ Transform:
   m_LocalPosition: {x: 2.1405606, y: -1.3070277, z: 7.186604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1824222508}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2123736620
@@ -3706,7 +3707,7 @@ MonoBehaviour:
   _BossHealth: {fileID: 1824222504}
   WaitTime: 5
   TimeBeforeAttacks: 2
-  sceneBuildIndex: 5
+  sceneBuildIndex: 6
 --- !u!1 &2124863490
 GameObject:
   m_ObjectHideFlags: 3
@@ -3805,7 +3806,6 @@ SceneRoots:
   - {fileID: 1827565993}
   - {fileID: 1694696575}
   - {fileID: 1014015006}
-  - {fileID: 1824222508}
   - {fileID: 1096658463}
   - {fileID: 2112637864}
   - {fileID: 621670152}

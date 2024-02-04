@@ -16,11 +16,11 @@ public class Eyes_transation : MonoBehaviour
         {
             if (_DialogueManager.Robotic_item)
             {
-             sceneBuildIntext = 6;
+             sceneBuildIntext = 7;
             }
             if (!_DialogueManager.Robotic_item)
             {
-             sceneBuildIntext = 7;
+             sceneBuildIntext = 8;
             }
             print("Trigger entered");
             transation.SetTrigger("Fadein"); // Causing the fade-in transition

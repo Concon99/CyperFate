@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 14
+  sceneBuildIntext: 16
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
@@ -3495,7 +3495,7 @@ Transform:
   m_GameObject: {fileID: 1841231676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.1, y: 148.98, z: 0}
+  m_LocalPosition: {x: -39.1, y: 146.8, z: 0}
   m_LocalScale: {x: 5.8030143, y: 5.957281, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

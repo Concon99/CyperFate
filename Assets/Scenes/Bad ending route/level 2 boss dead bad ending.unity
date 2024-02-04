@@ -2008,6 +2008,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1473823997}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!95 &1473823997
 Animator:
@@ -2437,7 +2438,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691312725}
-  - component: {fileID: 1691312724}
   - component: {fileID: 1691312723}
   - component: {fileID: 1691312722}
   m_Layer: 0
@@ -2512,21 +2512,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 68.71843, y: 10.64543}
   m_EdgeRadius: 0
---- !u!114 &1691312724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691312721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebacf5d06773d82458cc75febe8c2aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines: []
-  Hastriggered: 0
 --- !u!4 &1691312725
 Transform:
   m_ObjectHideFlags: 0
@@ -2587,7 +2572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab855a46191d4ec47b9010d474c4bf22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 12
+  sceneBuildIntext: 13
   transation: {fileID: 1473823997}
   transationTime: 0
   _DialogueManager: {fileID: 1473823996}

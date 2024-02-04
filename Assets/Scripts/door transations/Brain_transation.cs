@@ -16,11 +16,11 @@ public class Brain_transation : MonoBehaviour
         {
             if (_DialogueManager.Robotic_item)
             {
-             sceneBuildIntext = 18;
+             sceneBuildIntext = 19;
             }
             if (!_DialogueManager.Robotic_item)
             {
-             sceneBuildIntext = 19;
+             sceneBuildIntext = 20;
             }
             print("Trigger entered");
             transation.SetTrigger("Fadein"); // Causing the fade-in transition
