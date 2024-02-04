@@ -7,18 +7,23 @@ public class BossHealth : MonoBehaviour
     [SerializeField] private int PlayerDamage;
     [SerializeField] private int bHealth = 100;
     [SerializeField] private int bHealthMax = 100;
-    [SerializeField] private BossHealthVisual healthbar; // Corrected variable name
+    [SerializeField] private BossHealthVisual healthbar;
 
-    private void Awake() // Corrected method name
+    private Renderer objectRenderer;
+    private Color defaultColor;
+
+    void Start() // Corrected method name
     {
-        // Assuming you have a Rigidbody2D component on the same GameObject
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        objectRenderer = GetComponent<Renderer>();
+        defaultColor = objectRenderer.material.color;
+    }
 
-        // Assuming BossHealthVisual is a component in the children of this GameObject
+    private void Awake()
+    {
         healthbar = GetComponentInChildren<BossHealthVisual>();
     }
 
-    public int BHealth // Property to access bHealth
+    public int BHealth
     {
         get { return bHealth; }
         set { bHealth = value; }
@@ -30,7 +35,7 @@ public class BossHealth : MonoBehaviour
         {
             BDamage();
         }
-        if (collision.CompareTag("Lazer")) //laser damage 
+        if (collision.CompareTag("Lazer"))
         {
             StartCoroutine(LazerAttack());
         }
@@ -40,26 +45,39 @@ public class BossHealth : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
+            StartCoroutine(EyeFrame());
             BDamage();
             BDamage();
             BDamage();
             BDamage();
             BDamage();
-            yield return new WaitForSeconds(0.1f); // Fixed the typo here
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
     void BDamage()
     {
+        StartCoroutine(EyeFrame());
         print("boss hit~!");
-        bHealth = bHealth - PlayerDamage;
+        bHealth -= PlayerDamage;
 
-        // Assuming healthbar has a method like UpdateHealthBar that takes parameters
         healthbar.UpdateHealthBar(bHealth, bHealthMax);
 
         if (bHealth <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
+
+    IEnumerator EyeFrame()
+    {
+        ChangeColor(Color.red);
+        yield return new WaitForSeconds(0.1f);
+        ChangeColor(defaultColor);
     }
 }
