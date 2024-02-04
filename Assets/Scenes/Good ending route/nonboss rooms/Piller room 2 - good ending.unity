@@ -1457,7 +1457,7 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: You rejected the legs too in the game?
     - character:
         name: Player
@@ -1465,7 +1465,7 @@ MonoBehaviour:
       line: yeah
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: Alright, well, that's okay! This place is for testing, but I would highly
         recommend you take the parts. They can come in handy!
     - character:
@@ -2770,6 +2770,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

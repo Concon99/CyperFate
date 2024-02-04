@@ -1611,15 +1611,15 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: Congratulations, you've defeated all the bosses!
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: You have proven yourself worthy to enter the world again!
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: Past this point is the elevator! I'll see you soon!
   Hastriggered: 0
 --- !u!1 &755307118
@@ -2916,6 +2916,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

@@ -1485,20 +1485,20 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: Congratulations on defeating your first boss!
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: With this new ability, you can shoot a powerful laser attack! This will
         be helpful later on.
     - character:
         name: Player
-        icon: {fileID: 21300000, guid: e2df66ea9d23fa146b2a4168a52e1564, type: 3}
+        icon: {fileID: 21300000, guid: 74f1c3b7009196d47abe835d3649aff7, type: 3}
       line: my eyes hurt
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: Thats part of the process! Press space to shoot the lazer. It will have
         a cooldown after you shoot it. Use the target as pratice!
   Hastriggered: 0
@@ -2483,6 +2483,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

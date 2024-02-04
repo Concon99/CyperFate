@@ -1699,6 +1699,7 @@ MonoBehaviour:
   rb: {fileID: 648785815}
   speed: 15
   weapon: {fileID: 1044262206}
+  _healthController: {fileID: 0}
 --- !u!212 &648785817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1985,7 +1986,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714361348}
-  - component: {fileID: 714361347}
   - component: {fileID: 714361346}
   - component: {fileID: 714361349}
   m_Layer: 0
@@ -2040,21 +2040,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 62.675827, y: 28.527994}
   m_EdgeRadius: 0
---- !u!114 &714361347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714361344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebacf5d06773d82458cc75febe8c2aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines: []
-  Hastriggered: 0
 --- !u!4 &714361348
 Transform:
   m_ObjectHideFlags: 0
@@ -2086,11 +2071,11 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: Well it seems this is the end!
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: See you again!
   Hastriggered: 0
 --- !u!1 &802241168
@@ -2595,7 +2580,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a29e845ed06e11a4ba505cc7f4fc0682, type: 3}
-  m_Color: {r: 0.42075467, g: 0.58480513, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2992,6 +2977,7 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
+  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:
