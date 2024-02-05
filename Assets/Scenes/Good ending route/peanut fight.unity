@@ -4355,7 +4355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c198953c76f03ab4a855ed17969a4ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerDamage: 5
+  PlayerDamage: 1
   bHealth: 150
   bHealthMax: 300
   healthbar: {fileID: 1222017688}
@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3c180076c7c544086a78e8919607b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerDamage: 50
+  PlayerDamage: 1
   bHealth: 300
   bHealthMax: 300
   healthbar: {fileID: 2079090658}
