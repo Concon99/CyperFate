@@ -3967,7 +3967,7 @@ MonoBehaviour:
   _B3Attack4: {fileID: 512609850}
   WaitTime: 5
   TimeBeforeAttacks: 3
-  sceneBuildIntext: 19
+  sceneBuildIntext: 18
 --- !u!1 &2124863490
 GameObject:
   m_ObjectHideFlags: 3

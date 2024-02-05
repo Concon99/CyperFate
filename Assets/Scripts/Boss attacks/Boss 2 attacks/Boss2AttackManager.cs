@@ -7,7 +7,6 @@ public class Boss2AttackManager : MonoBehaviour
     [SerializeField] private BossHealth _BossHealth;
     [SerializeField] private EnemyBulletSpawner _EnemyBulletSpawner;
     [SerializeField] private B2Attack2 _B2Attack2;
-    [SerializeField] private B2Attack3 _B2Attack3;
     [SerializeField] private HealthController _healthController;
     [SerializeField] private Boss2movement _Boss2movement;
     public float WaitTime = 5f;
@@ -40,11 +39,6 @@ public class Boss2AttackManager : MonoBehaviour
             {
                 print("Performing Attack 2");
                 _B2Attack2.Attack2();  // Keep this line if Attack2() method exists
-            }
-            else if (randomAttack == 3)
-            {
-                print("Performing Attack 3");
-                _B2Attack3.Attack3();  // Keep this line if Attack3() method exists
             }
 
             yield return new WaitForSeconds(WaitTime);

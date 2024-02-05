@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8868870658870889101}
   - component: {fileID: -2335132940542055944}
   - component: {fileID: 5896796479223788580}
-  - component: {fileID: -1060356531321320739}
+  - component: {fileID: -9160298625943375167}
   m_Layer: 0
   m_Name: dashattack
   m_TagString: Untagged
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-1060356531321320739
+--- !u!114 &-9160298625943375167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1067898841642429066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e083b0f6b46585f4ba67f5e495e03ee0, type: 3}
+  m_Script: {fileID: 11500000, guid: 79f834c8a2bcce24387b945cb0292d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDamage: 1

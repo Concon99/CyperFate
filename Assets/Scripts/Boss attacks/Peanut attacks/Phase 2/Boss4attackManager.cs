@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Boss4attackManager : MonoBehaviour
 {
-    [SerializeField] private BossHealth _BossHealth;
+    [SerializeField] private Phase2BossHealth _phase2BossHealth_;
    
     public float WaitTime = 5f;
     public float TimeBeforeAttacks;
@@ -46,7 +46,7 @@ public class Boss4attackManager : MonoBehaviour
         healthbar.UpdateHealthBar(bHealth, bHealthMax);
         yield return new WaitForSeconds(TimeBeforeAttacks);
 
-        while (_BossHealth.BHealth > 0f)
+        while (_phase2BossHealth_.BHealth > 0f)
         {
             print("New attack");
             int randomAttack = Random.Range(1, 6);
@@ -101,7 +101,7 @@ public class Boss4attackManager : MonoBehaviour
     void Update()
     {
     
-        if (_BossHealth.BHealth < 0f)
+        if (_phase2BossHealth_.BHealth < 0f)
         {
             Debug.Log("Switching scenes");
             SceneManager.LoadScene(sceneBuildIntext, LoadSceneMode.Single);

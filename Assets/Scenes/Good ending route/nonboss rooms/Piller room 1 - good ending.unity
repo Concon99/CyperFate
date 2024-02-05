@@ -915,8 +915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -478, y: 256}
-  m_SizeDelta: {x: 215, y: 325}
+  m_AnchoredPosition: {x: -478.53833, y: 256}
+  m_SizeDelta: {x: 216.0767, y: 325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481311596
 MonoBehaviour:
@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 11
+  sceneBuildIntext: 10
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
@@ -1825,7 +1825,7 @@ MonoBehaviour:
       line: Congratulations on defeating your first-
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 140e086e3aa13314d86baad4fe7db802, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: ...
     - character:
         name: Peanut
@@ -1844,7 +1844,7 @@ MonoBehaviour:
         icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: That's fine! Just know that without the cybernetic features, the bosses
         will be much harder. So next time, please take them! You're here to prepare
-        for the outside world
+        for the outside world!
   Hastriggered: 0
 --- !u!1 &815126956
 GameObject:
@@ -2225,7 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerDamage: 1
+  playerDamage: 1
   bHealth: 100
   bHealthMax: 100
 --- !u!1 &1277208402
@@ -2685,7 +2685,6 @@ MonoBehaviour:
   isDialogueActive: 0
   typingSpeed: 0.02
   animator: {fileID: 1346561778}
-  _vanish: {fileID: 0}
   Robotic_item: 0
 --- !u!114 &1346561780
 MonoBehaviour:

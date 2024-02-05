@@ -756,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64b2a0c0ff52274288bfc1b76898506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIntext: 3
+  sceneBuildIntext: 4
   transation: {fileID: 1339319263}
   transationTime: 0
   _DialogueManager: {fileID: 1346561779}
@@ -1351,8 +1351,8 @@ Transform:
   m_GameObject: {fileID: 714361344}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: 14.8, z: 6.569118}
-  m_LocalScale: {x: 1.2, y: 1, z: 1}
+  m_LocalPosition: {x: -24.6, y: 19.7, z: 6.569118}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1377,7 +1377,7 @@ MonoBehaviour:
       line: So, what's going on exactly?
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: We're basically a facility that trains people to prepare for the new
         world. You're one of our first testers!
     - character:
@@ -1386,17 +1386,17 @@ MonoBehaviour:
       line: Ok
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: During your training you will have to fight several bosses we've designed.
         I am programmed to help you learn what to do.
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: If you've noticed, you're equipped with a gun. Use it to shoot the enemies.
         If you want, you can use that target as practice!
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: 9eac2f5200533e842ad0be7a10cbf547, type: 3}
       line: Anyways, if you defeat the bosses, they will drop items that can enhance
         your abilities.
     - character:
@@ -1405,7 +1405,7 @@ MonoBehaviour:
       line: like what?
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: You'll see!
     - character:
         name: Player
@@ -1413,7 +1413,7 @@ MonoBehaviour:
       line: alright is that all
     - character:
         name: Peanut
-        icon: {fileID: 21300000, guid: 7d4229be27429b645b65b28b50fef710, type: 3}
+        icon: {fileID: 21300000, guid: b5fc8a17f0116b14fb035478c691c3d2, type: 3}
       line: Yeah, pretty much! Take as much time as you need here to practice on
         the target!
   Hastriggered: 0
@@ -1794,7 +1794,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047909588}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1937,9 +1937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c161c0712a0dc0c4b8a35befcb917afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerDamage: 1
-  bHealth: 10
-  bHealthMax: 10
+  playerDamage: 1
+  bHealth: 25
+  bHealthMax: 25
 --- !u!1 &1277208402
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,17 @@ public class PeanutBoss : MonoBehaviour
     [SerializeField] private Boss4attackManager _Boss4attackManager;
     public CanvasGroup canvasGroup;
 
+    private Renderer objectRenderer;
+    private Color defaultColor;
+
+    public AudioSource _Static;
+
+    void Start()
+    {
+        objectRenderer = GetComponent<Renderer>();
+        defaultColor = objectRenderer.material.color;
+    }
+    
     private void Awake()
     {
         // Assuming you have a Rigidbody2D component on the same GameObject
@@ -31,14 +42,8 @@ public class PeanutBoss : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
+            StartCoroutine(EyeFrame());
             StartCoroutine(BDamage());
-        }
-        if (collision.CompareTag("Lazer"))
-        {
-            for (int i = 0; i < 50; i++)
-            {
-                StartCoroutine(BDamage());
-            }
         }
     }
 
@@ -56,7 +61,8 @@ public class PeanutBoss : MonoBehaviour
 
             _HealthController.PlayerHealth = 100;
             canvasGroup.alpha = 1f;
-            yield return new WaitForSeconds(2);
+            _Static.Play();
+            yield return new WaitForSeconds(3);
 
 
             canvasGroup.alpha = 0f;
@@ -67,7 +73,17 @@ public class PeanutBoss : MonoBehaviour
             Destroy(gameObject);
         }
     }
+        void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
 
+    IEnumerator EyeFrame()
+    {
+        ChangeColor(Color.red);
+        yield return new WaitForSeconds(0.1f);
+        ChangeColor(defaultColor);
+    }
     public void Phase2()
     {
     }

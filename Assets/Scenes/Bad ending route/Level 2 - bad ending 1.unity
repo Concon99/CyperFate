@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 8743155}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0036357068, y: -4.9438686, z: 0}
+  m_LocalPosition: {x: 0.02, y: -4.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2626,7 +2626,6 @@ MonoBehaviour:
   _BossHealth: {fileID: 1349108472}
   _EnemyBulletSpawner: {fileID: 1349108469}
   _B2Attack2: {fileID: 1121462534}
-  _B2Attack3: {fileID: 1862511847}
   _healthController: {fileID: 2092575955}
   _Boss2movement: {fileID: 1349108470}
   WaitTime: 3
@@ -3188,17 +3187,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
---- !u!114 &1408435030 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5411976635636375557, guid: 2cf707550a1ddee4c9d149390202bb94, type: 3}
-  m_PrefabInstance: {fileID: 1408435029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5acdc6ab14a5a024f9874d3a96e0f11e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1467730186
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,52 +4092,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1862511846
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1862511848}
-  - component: {fileID: 1862511847}
-  m_Layer: 0
-  m_Name: Attack3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1862511847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862511846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f0df3164e5ab674aa579de06e7d8898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _B2Attack1: {fileID: 1408435030}
-  transation: {fileID: 806766096}
---- !u!4 &1862511848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862511846}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.444027, y: 20.154387, z: 0.021474598}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1888842841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,7 +4597,6 @@ SceneRoots:
   - {fileID: 1349108475}
   - {fileID: 1513808242}
   - {fileID: 2092575954}
-  - {fileID: 1862511848}
   - {fileID: 295971569}
   - {fileID: 205593740}
   - {fileID: 1709367931}

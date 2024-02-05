@@ -13,7 +13,6 @@ public class B2Attack1_2 : MonoBehaviour
 
     public AudioSource DropSound;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +22,6 @@ public class B2Attack1_2 : MonoBehaviour
 
         // Align with the spawner's direction before firing
         StartCoroutine(AlignWithSpawner());
-
-        // Alternatively, you can directly set the rotation without alignment
-        // transform.rotation = spawner.rotation;
-        // StartCoroutine(MoveForwardAfterRotation());
     }
 
     IEnumerator AlignWithSpawner()
@@ -34,17 +29,14 @@ public class B2Attack1_2 : MonoBehaviour
         Debug.Log("AlignWithSpawner coroutine started");
         float elapsedTime = 0f;
         Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = spawner.rotation;
+
+        // Adjust the target rotation by rotating more to the right (you can modify the angle)
 
         while (elapsedTime < alignDuration)
         {
-            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, elapsedTime / alignDuration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
-        // Ensure exact alignment at the end
-        transform.rotation = targetRotation;
 
         // Move forward after alignment
         StartCoroutine(MoveForwardAfterRotation());

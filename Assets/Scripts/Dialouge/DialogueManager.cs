@@ -16,7 +16,6 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed = 0.2f;
 
     public Animator animator;
-    public Animator _vanish;
 
 
 
@@ -81,7 +80,6 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         animator.Play("hide");
-        _vanish.SetBool("Vanish",true);
         Debug.Log("Dialouge over");
 
     }
